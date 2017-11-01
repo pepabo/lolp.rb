@@ -5,3 +5,4 @@ module Lolp
 end
 
 require 'lolp/client'
+require 'lolp/resources'
