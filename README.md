@@ -20,7 +20,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+Lolp.configure do |config|
+  config.api_url  = 'LOLIPOP MC API URL'
+  config.username = 'LOLIPOP MC USERNAME'
+  config.password = 'LOLIPOP MC PASSWORD'
+end
+```
 
 ## Development
 
