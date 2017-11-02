@@ -8,9 +8,13 @@ module Lolp
 
     def initialize
       authorize
+      @default_client = generate_client
     end
+    attr_reader :default_client
 
-    def default_client
+    private
+
+    def generate_client
       Faraday.new(url: config.api_url, headers: { cookie: @session }) do |faraday|
         faraday.request :json
         faraday.response :json, content_type: /\bjson$/
@@ -20,8 +24,10 @@ module Lolp
     end
 
     def authorize
-      result = default_client.post 'api/login', username: config.username, password: config.password
-      @session = result.env[:response_headers]['set-cookie']
+      unless @session
+        result = generate_client.post 'api/login', username: config.username, password: config.password
+        @session = result.env[:response_headers]['set-cookie']
+      end
     end
   end
 end
