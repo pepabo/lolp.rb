@@ -6,7 +6,10 @@ module Lolp::Resources
 
     class << self
       def client
-        @client ||= Lolp::Client.new
+        unless @client
+          client = Lolp::Client.new
+          @client = client.default_client
+        end
       end
     end
   end
