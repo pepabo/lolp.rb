@@ -35,10 +35,7 @@ module Lolp
     end
 
     def authorize
-      unless @token
-        result = connection.post('api/login', username: config.username, password: config.password)
-        @token = result.body
-      end
+      @token ||= connection.post('api/login', username: config.username, password: config.password).body
     end
   end
 end
