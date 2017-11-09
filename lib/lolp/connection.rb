@@ -11,16 +11,16 @@ module Lolp
       @connection = connection
     end
 
-    def get(url)
-      @connection.get(url)
+    def get(path)
+      @connection.get(path)
     end
 
-    def post(url, params = {})
-      @connection.post(url, params)
+    def post(path, params = {})
+      @connection.post(path, params)
     end
 
-    def delete(url, params = {})
-      @connection.delete(url, params)
+    def delete(path, params = {})
+      @connection.delete(path, params)
     end
 
     private
