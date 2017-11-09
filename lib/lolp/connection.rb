@@ -7,7 +7,7 @@ module Lolp
     include Lolp::Configuration
 
     def initialize
-      authorize
+      authenticate
       @connection = connection
     end
 
@@ -34,7 +34,7 @@ module Lolp
       end
     end
 
-    def authorize
+    def authenticate
       @token ||= connection.post('api/login', username: config.username, password: config.password).body
     end
   end
