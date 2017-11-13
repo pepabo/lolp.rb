@@ -2,7 +2,7 @@ require 'lolp/connection'
 
 module Lolp
   class Client
-    def get_projects
+    def projects
       connection.get('api/projects')
     end
 
