@@ -5,4 +5,3 @@ module Lolp
 end
 
 require 'lolp/client'
-require 'lolp/project_types'
