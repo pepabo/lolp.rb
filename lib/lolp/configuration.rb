@@ -12,7 +12,7 @@ module Lolp
       attr_accessor :api_url, :username, :password
 
       def initialize
-        @api_url  = ENV['LOLIPOP_MC_API_URL']
+        @api_url  = ENV['LOLIPOP_MC_API_ENDPOINT']
         @username = ENV['LOLIPOP_MC_USERNAME']
         @password = ENV['LOLIPOP_MC_PASSWORD']
       end

@@ -35,7 +35,7 @@ module Lolp
     end
 
     def authenticate
-      @token ||= connection.post('api/login', username: config.username, password: config.password).body
+      @token ||= connection.post('login', username: config.username, password: config.password).body
     end
   end
 end

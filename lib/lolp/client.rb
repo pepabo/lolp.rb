@@ -3,15 +3,15 @@ require 'lolp/connection'
 module Lolp
   class Client
     def projects
-      connection.get('api/projects')
+      connection.get('projects')
     end
 
     def create_project(type, params = {})
-      connection.post('api/projects', params.merge(haco_type: type))
+      connection.post('projects', params.merge(haco_type: type))
     end
 
     def delete_project(name)
-      connection.delete("api/projects/#{name}")
+      connection.delete("projects/#{name}")
     end
 
     private
