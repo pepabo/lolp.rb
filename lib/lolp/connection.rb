@@ -4,7 +4,13 @@ require 'lolp/configuration'
 require 'singleton'
 
 module Lolp
-  class Connection
+  module Connection
+    def connection
+      SetConnection.instance
+    end
+  end
+
+  class SetConnection
     include Singleton
     include Lolp::Configuration
 

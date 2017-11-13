@@ -2,6 +2,8 @@ require 'lolp/connection'
 
 module Lolp
   class Client
+    extend Lolp::Connection
+
     class << self
       def projects
         connection.get('projects')
@@ -13,10 +15,6 @@ module Lolp
 
       def delete_project(name)
         connection.delete("projects/#{name}")
-      end
-
-      def connection
-        Connection.instance
       end
     end
   end
