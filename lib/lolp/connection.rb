@@ -6,11 +6,11 @@ require 'singleton'
 module Lolp
   module Connection
     def connection
-      SetConnection.instance
+      Client.instance
     end
   end
 
-  class SetConnection
+  class Client
     include Singleton
     include Lolp::Configuration
 
