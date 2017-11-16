@@ -1,17 +1,9 @@
 require 'faraday'
 require 'faraday_middleware'
 require 'lolp/configuration'
-require 'singleton'
 
 module Lolp
-  module Connection
-    def connection
-      FaradayConnection.instance
-    end
-  end
-
-  class FaradayConnection
-    include Singleton
+  class Connection
     include Lolp::Configuration
 
     def initialize

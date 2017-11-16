@@ -3,7 +3,10 @@ require 'lolp/project'
 
 module Lolp
   class Client
-    include Lolp::Connection
     include Lolp::Project
+
+    def connection
+      @connection ||= Lolp::Connection.new
+    end
   end
 end
