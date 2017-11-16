@@ -6,11 +6,11 @@ require 'singleton'
 module Lolp
   module Connection
     def connection
-      Client.instance
+      FaradayConnection.instance
     end
   end
 
-  class Client
+  class FaradayConnection
     include Singleton
     include Lolp::Configuration
 

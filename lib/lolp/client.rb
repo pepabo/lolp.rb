@@ -3,7 +3,7 @@ require 'lolp/project'
 
 module Lolp
   class Client
-    extend Lolp::Connection
-    extend Lolp::Project
+    include Lolp::Connection
+    include Lolp::Project
   end
 end

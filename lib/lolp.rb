@@ -4,7 +4,7 @@ require 'lolp/client'
 module Lolp
   class << self
     def client
-      @client ||= Lolp::Client
+      @client ||= Lolp::Client.new
     end
 
     def method_missing(method_name, *args, &block)
