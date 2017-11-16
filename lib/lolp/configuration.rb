@@ -9,10 +9,10 @@ module Lolp
     end
 
     class Config
-      attr_accessor :api_url, :username, :password
+      attr_accessor :api_endpoint, :username, :password
 
       def initialize
-        @api_url  = ENV['LOLIPOP_MC_API_ENDPOINT'] || 'https://mc.lolipop.jp/api'
+        @api_endpoint = ENV['LOLIPOP_MC_API_ENDPOINT'] || 'https://mc.lolipop.jp/api'
         @username = ENV['LOLIPOP_MC_USERNAME']
         @password = ENV['LOLIPOP_MC_PASSWORD']
       end
