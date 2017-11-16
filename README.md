@@ -22,7 +22,7 @@ Or install it yourself as:
 
 ```ruby
 Lolp.configure do |config|
-  config.api_url  = 'LOLIPOP MC API URL'
+  config.api_url  = 'LOLIPOP MC API ENDPOINT'
   config.username = 'LOLIPOP MC USERNAME'
   config.password = 'LOLIPOP MC PASSWORD'
 end
