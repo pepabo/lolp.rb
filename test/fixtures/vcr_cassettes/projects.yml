@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://staging.mc.lolipop.jp/api/projects
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - "Bearer <TOKEN>"
+      User-Agent:
+      - Faraday v0.13.1
+  response:
+    status:
+      code: 200
+      message:
+    headers:
+      date:
+      - Mon, 20 Nov 2017 03:45:36 GMT
+      connection:
+      - close
+      content-length:
+      - '2455'
+      server:
+      - h2o/2.2.2
+      content-type:
+      - application/json; charset=utf-8
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+      x-ohr-status:
+      - s, 7167, 20171120-033256.839, 761.339
+      etag:
+      - W/"997-cPzggUp7bOzFmaezAnzSXhxtAjM"
+      front-end-https:
+      - 'on'
+    body:
+      encoding: UTF-8
+      string: '[{"id":776,"created_at":"2017-11-20T03:44:57.688255Z","updated_at":"2017-11-20T03:44:57.688255Z","domain":"tight-ureshino-5550.staging.lolipop.io","account_humane_id":"dark-beppu-2101","svm":"","volume":"","base_spec":{"cpuset_cpus":"11","cpu_cfs_period_us":"100000","cpu_cfs_quota_us":"30000","memory_limit_in_bytes":"536870912","memory_memsw_limit_in_bytes":"536870912","netns":"netns_","veth_prefix":""},"container_templates":[{"hacofile":"rails.haco","ports":null,"num":1},{"hacofile":"gitpush-ruby.haco","ports":[{"id":0,"created_at":"0001-01-01T00:00:00Z","updated_at":"0001-01-01T00:00:00Z","port":22,"protocol":0,"container_id":null,"compute_connection":null}],"num":1}],"managed_config":{"db_name":"dark-beppu-2101_scic","db_user":"dark-beppu-2101_5xis7"},"custom_domains":null,"containers":[{"id":4803,"created_at":"2017-11-20T03:44:57.689594Z","updated_at":"2017-11-20T03:44:57.697801Z","cid":"tight-ureshino-5550.staging.lolipop.io-1af6f6265c","project_id":776,"status":1,"hacofile":"rails.haco","spec":{"cpuset_cpus":"11","cpu_cfs_period_us":"100000","cpu_cfs_quota_us":"30000","memory_limit_in_bytes":"536870912","memory_memsw_limit_in_bytes":"536870912","netns":"netns_1af6f6265c","veth_prefix":"1af6f6265c"},"last_error":"","ip_address":{"id":2587,"created_at":"2017-07-24T18:51:44.402247Z","updated_at":"2017-11-20T03:44:57.698843Z","container_ip":"10.1.11.38/16","compute_ip":"10.51.78.206","container_id":4803},"ports":[{"id":4803,"created_at":"2017-11-20T03:44:57.690638Z","updated_at":"2017-11-20T03:44:57.699601Z","port":443,"protocol":0,"container_id":4803,"compute_connection":null}],"project":null},{"id":4804,"created_at":"2017-11-20T03:44:57.691467Z","updated_at":"2017-11-20T03:44:57.703182Z","cid":"tight-ureshino-5550.staging.lolipop.io-7772f2f8e2","project_id":776,"status":1,"hacofile":"gitpush-ruby.haco","spec":{"cpuset_cpus":"11","cpu_cfs_period_us":"100000","cpu_cfs_quota_us":"30000","memory_limit_in_bytes":"536870912","memory_memsw_limit_in_bytes":"536870912","netns":"netns_7772f2f8e2","veth_prefix":"7772f2f8e2"},"last_error":"","ip_address":{"id":2588,"created_at":"2017-07-24T18:51:44.406318Z","updated_at":"2017-11-20T03:44:57.704041Z","container_ip":"10.1.11.39/16","compute_ip":"10.51.78.206","container_id":4804},"ports":[{"id":4804,"created_at":"2017-11-20T03:44:57.692428Z","updated_at":"2017-11-20T03:44:57.708665Z","port":22,"protocol":0,"container_id":4804,"compute_connection":null}],"project":null}]}]'
+    http_version:
+  recorded_at: Mon, 20 Nov 2017 03:45:33 GMT
+recorded_with: VCR 3.0.3
