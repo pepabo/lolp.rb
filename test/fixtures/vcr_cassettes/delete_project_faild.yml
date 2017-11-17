@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: https://staging.mc.lolipop.jp/api/projects/invalid-name
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - "Bearer <TOKEN>"
+      User-Agent:
+      - Faraday v0.13.1
+  response:
+    status:
+      code: 500
+      message:
+    headers:
+      date:
+      - Mon, 20 Nov 2017 03:46:06 GMT
+      connection:
+      - close
+      content-length:
+      - '21'
+      server:
+      - h2o/2.2.2
+      content-type:
+      - text/plain; charset=utf-8
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+      x-ohr-status:
+      - s, 7094, 20171120-033252.543, 795.792
+      etag:
+      - W/"15-/6VXivhc2MKdLfIkLcUE47K6aH0"
+    body:
+      encoding: UTF-8
+      string: Internal Server Error
+    http_version:
+  recorded_at: Mon, 20 Nov 2017 03:46:03 GMT
+recorded_with: VCR 3.0.3

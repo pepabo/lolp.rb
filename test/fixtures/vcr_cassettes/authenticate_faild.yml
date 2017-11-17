@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://staging.mc.lolipop.jp/api/projects
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - "Bearer <TOKEN>"
+      User-Agent:
+      - Faraday v0.13.1
+  response:
+    status:
+      code: 403
+      message:
+    headers:
+      date:
+      - Mon, 20 Nov 2017 03:47:21 GMT
+      connection:
+      - close
+      content-length:
+      - '46'
+      server:
+      - h2o/2.2.2
+      content-type:
+      - application/json; charset=utf-8
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+      x-ohr-status:
+      - s, 7161, 20171120-033256.789, 866.429
+      set-cookie:
+      - OHRT=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT
+      etag:
+      - W/"2e-Xz4RglkgMI7u9o1IPumTQCVhx6s"
+    body:
+      encoding: UTF-8
+      string: '{"errors":["Not enough or too many segments"]}'
+    http_version:
+  recorded_at: Mon, 20 Nov 2017 03:47:18 GMT
+recorded_with: VCR 3.0.3
