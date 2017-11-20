@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: https://staging.mc.lolipop.jp/api/projects/jolly-hirado-0217.staging.lolipop.io/custom-domains/example.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <TOKEN>
+      User-Agent:
+      - Faraday v0.13.1
+  response:
+    status:
+      code: 204
+      message: 
+    headers:
+      date:
+      - Mon, 20 Nov 2017 06:34:27 GMT
+      connection:
+      - close
+      server:
+      - h2o/2.2.2
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+      x-ohr-status:
+      - s, 11461, 20171120-060338.702, 1850.759
+      etag:
+      - W/"a-bAsFyilMr4Ra1hIU5PyoyFRunpI"
+      front-end-https:
+      - 'on'
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Mon, 20 Nov 2017 06:34:24 GMT
+recorded_with: VCR 3.0.3
