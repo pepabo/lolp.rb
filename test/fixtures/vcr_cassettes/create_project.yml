@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://staging.mc.lolipop.jp/api/projects
+    body:
+      encoding: UTF-8
+      string: '{"haco_type":"rails"}'
+    headers:
+      Authorization:
+      - "Bearer <TOKEN>"
+      User-Agent:
+      - Faraday v0.13.1
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message:
+    headers:
+      date:
+      - Mon, 20 Nov 2017 03:44:57 GMT
+      connection:
+      - close
+      content-length:
+      - '88'
+      server:
+      - h2o/2.2.2
+      content-type:
+      - application/json; charset=utf-8
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+      x-ohr-status:
+      - s, 7161, 20171120-033256.789, 722.751
+      etag:
+      - W/"58-OyicGWDkF4A+SVG9DJs+YtqbhnU"
+      front-end-https:
+      - 'on'
+    body:
+      encoding: UTF-8
+      string: '{"project_name":"tight-ureshino-5550","domain":"tight-ureshino-5550.staging.lolipop.io"}'
+    http_version:
+  recorded_at: Mon, 20 Nov 2017 03:44:54 GMT
+recorded_with: VCR 3.0.3
