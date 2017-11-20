@@ -29,7 +29,6 @@ module Lolp
       Faraday.new(url: config.api_endpoint, headers: { Authorization: "Bearer #{@token}" }) do |faraday|
         faraday.request :json
         faraday.response :json, content_type: /\bjson$/
-        faraday.response :logger
         faraday.adapter Faraday.default_adapter
       end
     end
