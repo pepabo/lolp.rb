@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://staging.mc.lolipop.jp/api/projects/invalid_domain/custom-domains
+    body:
+      encoding: UTF-8
+      string: '{"domain":"example.com"}'
+    headers:
+      Authorization:
+      - Bearer <TOKEN>
+      User-Agent:
+      - Faraday v0.13.1
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 500
+      message: 
+    headers:
+      date:
+      - Mon, 20 Nov 2017 06:28:44 GMT
+      connection:
+      - close
+      content-length:
+      - '21'
+      server:
+      - h2o/2.2.2
+      content-type:
+      - text/plain; charset=utf-8
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+      x-ohr-status:
+      - s, 11431, 20171120-060336.723, 1509.693
+      etag:
+      - W/"15-/6VXivhc2MKdLfIkLcUE47K6aH0"
+    body:
+      encoding: UTF-8
+      string: Internal Server Error
+    http_version: 
+  recorded_at: Mon, 20 Nov 2017 06:28:41 GMT
+recorded_with: VCR 3.0.3

@@ -49,4 +49,36 @@ class ProjectTest < Minitest::Test
       assert_equal 'Internal Server Error', response.body
     end
   end
+
+  def test_create_custom_domain
+    VCR.use_cassette('create_custom_domain') do
+      response = Lolp.create_custom_domain('jolly-hirado-0217.staging.lolipop.io', 'example.com')
+      assert_equal 201, response.status
+      assert_equal 'Created', response.body
+    end
+  end
+
+  def test_create_custom_domain_faild
+    VCR.use_cassette('create_custom_domain_faild') do
+      response = Lolp.create_custom_domain('invalid_domain', 'example.com')
+      assert_equal 500, response.status
+      assert_equal 'Internal Server Error', response.body
+    end
+  end
+
+  def test_delete_custom_domain
+    VCR.use_cassette('delete_custom_domain') do
+      response = Lolp.delete_custom_domain('jolly-hirado-0217.staging.lolipop.io', 'example.com')
+      assert_equal 204, response.status
+      assert_equal '', response.body
+    end
+  end
+
+  def test_delete_custom_domain_faild
+    VCR.use_cassette('delete_custom_domain_faild') do
+      response = Lolp.delete_custom_domain('invalid_domain', 'example.com')
+      assert_equal 500, response.status
+      assert_equal 'Internal Server Error', response.body
+    end
+  end
 end
