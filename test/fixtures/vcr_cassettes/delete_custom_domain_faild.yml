@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: delete
-    uri: https://staging.mc.lolipop.jp/api/projects/invalid_domain/custom-domains/example.com
+    uri: https://mc.lolipop.jp/api/projects/invalid_domain/custom-domains/example.com
     body:
       encoding: US-ASCII
       string: ''
