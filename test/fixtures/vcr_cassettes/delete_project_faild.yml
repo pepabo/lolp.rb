@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: delete
-    uri: https://staging.mc.lolipop.jp/api/projects/invalid-name
+    uri: https://mc.lolipop.jp/api/projects/invalid-name
     body:
       encoding: US-ASCII
       string: ''
