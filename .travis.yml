@@ -1,0 +1,6 @@
+language: ruby
+
+rvm:
+  - ruby-head
+
+script: bundle exec rake test
