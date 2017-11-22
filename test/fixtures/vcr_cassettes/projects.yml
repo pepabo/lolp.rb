@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://staging.mc.lolipop.jp/api/projects
+    uri: https://mc.lolipop.jp/api/projects
     body:
       encoding: US-ASCII
       string: ''
