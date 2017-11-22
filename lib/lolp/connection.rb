@@ -1,12 +1,10 @@
 require 'faraday'
 require 'faraday_middleware'
-require 'lolp/configuration'
 
 module Lolp
   class Connection
-    include Lolp::Configuration
-
-    def initialize
+    def initialize(config)
+      @config = config
       authenticate
       @connection = connection
     end
@@ -26,7 +24,7 @@ module Lolp
     private
 
     def connection
-      Faraday.new(url: config.api_endpoint, headers: { Authorization: "Bearer #{@token}" }) do |faraday|
+      Faraday.new(url: @config.api_endpoint, headers: { Authorization: "Bearer #{@token}" }) do |faraday|
         faraday.request :json
         faraday.response :json, content_type: /\bjson$/
         faraday.adapter Faraday.default_adapter
@@ -34,7 +32,7 @@ module Lolp
     end
 
     def authenticate
-      @token ||= connection.post('login', username: config.username, password: config.password).body
+      @token ||= connection.post('login', username: @config.username, password: @config.password).body
     end
   end
 end

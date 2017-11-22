@@ -3,7 +3,9 @@ require 'lolp'
 require 'minitest/autorun'
 require 'vcr'
 
-ENV['LOLIPOP_MC_API_ENDPOINT'] = 'https://staging.mc.lolipop.jp/api'
+Lolp.configure do |config|
+  config.api_endpoint = 'https://mc.lolipop.jp/api'
+end
 
 VCR.configure do |config|
   config.cassette_library_dir = 'test/fixtures/vcr_cassettes'

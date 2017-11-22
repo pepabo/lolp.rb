@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: delete
-    uri: https://staging.mc.lolipop.jp/api/projects/tight-ureshino-5550
+    uri: https://mc.lolipop.jp/api/projects/tight-ureshino-5550
     body:
       encoding: US-ASCII
       string: ''
