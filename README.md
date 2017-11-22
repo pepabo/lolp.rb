@@ -1,5 +1,7 @@
 # Lolp.rb
 
+[![Lolipop!](https://raw.githubusercontent.com/pepabo/lolp.rb/images/lolipop-logo-by-gmo-pepabo.png)](https://lolipop.jp)
+
 Simple ruby wrapper for Lolipop! API.
 
 [![Gem Version](https://badge.fury.io/rb/lolp.svg)](https://badge.fury.io/rb/lolp)
