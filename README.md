@@ -28,6 +28,16 @@ Lolp.configure do |config|
 end
 ```
 
+### Projects
+
+```ruby
+Lolp.projects
+Lolp.create_project(:rails) # :wordpress, :php, ...
+Lolp.delete_project('jungly-naha-2778')
+Lolp.create_custom_domain('jungly-naha-2778.lolipop.ohr','example.com')
+Lolp.delete_custom_domain('jungly-naha-2778.lolipop.ohr','example.com')
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
