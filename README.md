@@ -2,6 +2,9 @@
 
 Simple ruby wrapper for Lolipop! API.
 
+[![Gem Version](https://badge.fury.io/rb/lolp.svg)](https://badge.fury.io/rb/lolp)
+[![Build Status](https://travis-ci.org/pepabo/lolp.rb.svg?branch=master)](https://travis-ci.org/pepabo/lolp.rb)
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -46,5 +49,5 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/linyows/lolp.
 
+Bug reports and pull requests are welcome on GitHub at https://github.com/pepabo/lolp.
