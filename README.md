@@ -1,6 +1,7 @@
-# Lolp.rb
+<p align="center"><img src="https://raw.githubusercontent.com/pepabo/lolp.rb/images/lolipop-logo-by-gmo-pepabo.png" width="300" alt="lolp" /></p><p align="center"><strong>lolp</strong>: Simple ruby wrapper for Lolipop! API.</p> <br /> <br />
 
-Simple ruby wrapper for Lolipop! API.
+[![Gem Version](https://img.shields.io/gem/v/lolp.svg?style=flat-square)](https://rubygems.org/gems/lolp)
+[![Build Status](https://img.shields.io/travis/pepabo/lolp.rb.svg?style=flat-square)](https://travis-ci.org/pepabo/lolp.rb)
 
 ## Installation
 
@@ -46,5 +47,5 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/linyows/lolp.
 
+Bug reports and pull requests are welcome on GitHub at https://github.com/pepabo/lolp.rb.

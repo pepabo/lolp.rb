@@ -1,0 +1,12 @@
+language: ruby
+
+rvm:
+  - 2.3
+  - 2.4
+  - ruby-head
+
+script: bundle exec rake test
+
+notifications:
+  slack: pepabo:1cO6OMIn3eFpIeyMXSuxrYjC
+  email: false
