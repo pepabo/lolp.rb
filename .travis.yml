@@ -6,3 +6,7 @@ rvm:
   - ruby-head
 
 script: bundle exec rake test
+
+notifications:
+  slack: pepabo:1cO6OMIn3eFpIeyMXSuxrYjC
+  email: false
