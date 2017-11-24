@@ -1,11 +1,7 @@
-# Lolp.rb
+<p align="center"><img src="https://raw.githubusercontent.com/pepabo/lolp.rb/images/lolipop-logo-by-gmo-pepabo.png" width="300" alt="lolp" /></p><p align="center"><strong>lolp</strong>: Simple ruby wrapper for Lolipop! API.</p> <br /> <br />
 
-[![Lolipop!](https://raw.githubusercontent.com/pepabo/lolp.rb/images/lolipop-logo-by-gmo-pepabo.png)](https://lolipop.jp)
-
-Simple ruby wrapper for Lolipop! API.
-
-[![Gem Version](https://badge.fury.io/rb/lolp.svg)](https://badge.fury.io/rb/lolp)
-[![Build Status](https://travis-ci.org/pepabo/lolp.rb.svg?branch=master)](https://travis-ci.org/pepabo/lolp.rb)
+[![Gem Version](https://img.shields.io/gem/v/lolp.svg?style=flat-square)](https://rubygems.org/gems/lolp)
+[![Build Status](https://img.shields.io/travis/pepabo/lolp.rb.svg?style=flat-square)](https://travis-ci.org/pepabo/lolp.rb)
 
 ## Installation
 
