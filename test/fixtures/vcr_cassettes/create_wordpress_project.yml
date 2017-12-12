@@ -5,7 +5,7 @@ http_interactions:
     uri: https://mc.lolipop.jp/api/projects
     body:
       encoding: UTF-8
-      string: '{"type":"invalid_template"}'
+      string: '{"payload":{"username":"<USERNAME>","password":"<PASSWORD>","email":"<EMAIL>"},"type":"wordpress"}'
     headers:
       Authorization:
       - Bearer <TOKEN>
@@ -15,30 +15,32 @@ http_interactions:
       - application/json
   response:
     status:
-      code: 400
+      code: 201
       message: 
     headers:
       date:
-      - Tue, 12 Dec 2017 09:49:41 GMT
+      - Tue, 12 Dec 2017 09:50:44 GMT
       connection:
       - close
       content-length:
-      - '11'
+      - '84'
       server:
       - h2o/2.2.2
       content-type:
-      - text/plain; charset=utf-8
+      - application/json; charset=utf-8
       access-control-allow-origin:
       - "*"
       access-control-allow-headers:
       - Origin, X-Requested-With, Content-Type, Accept
       x-ohr-status:
-      - m, 25911, 20171211-014815.519, 115288.412
+      - m, 25883, 20171211-014813.205, 115353.587
       etag:
-      - W/"b-EFiDB1U+dmqzx9Mo2UjcZ1SJPO8"
+      - W/"54-37TYJVGWpO3/pepk9+blweQ0+jU"
+      front-end-https:
+      - 'on'
     body:
       encoding: UTF-8
-      string: Bad Request
+      string: '{"domain":"passionate-iizuka-6926.lolipop.io","sub_domain":"passionate-iizuka-6926"}'
     http_version: 
-  recorded_at: Tue, 12 Dec 2017 09:49:38 GMT
+  recorded_at: Tue, 12 Dec 2017 09:50:41 GMT
 recorded_with: VCR 3.0.3

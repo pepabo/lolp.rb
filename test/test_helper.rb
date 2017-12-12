@@ -11,7 +11,13 @@ VCR.configure do |config|
   config.cassette_library_dir = 'test/fixtures/vcr_cassettes'
   config.hook_into :faraday
   config.filter_sensitive_data("<PASSWORD>") do |interaction|
-    test_db_password
+    test_password
+  end
+  config.filter_sensitive_data("<USERNAME>") do |interaction|
+    test_username
+  end
+  config.filter_sensitive_data("<EMAIL>") do |interaction|
+    test_email
   end
   config.filter_sensitive_data("Bearer <TOKEN>") do |interaction|
     interaction.request.headers['Authorization'].first
@@ -21,6 +27,14 @@ VCR.configure do |config|
   end
 end
 
-def test_db_password
+def test_password
   'x' * 20
+end
+
+def test_username
+  'x' * 5
+end
+
+def test_email
+  'test@example.com'
 end

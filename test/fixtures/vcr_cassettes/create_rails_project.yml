@@ -5,7 +5,7 @@ http_interactions:
     uri: https://mc.lolipop.jp/api/projects
     body:
       encoding: UTF-8
-      string: '{"type":"rails","db_password":"<PASSWORD>"}'
+      string: '{"db_password":"<PASSWORD>","type":"rails"}'
     headers:
       Authorization:
       - Bearer <TOKEN>
@@ -19,11 +19,11 @@ http_interactions:
       message: 
     headers:
       date:
-      - Tue, 12 Dec 2017 06:21:01 GMT
+      - Tue, 12 Dec 2017 09:45:08 GMT
       connection:
       - close
       content-length:
-      - '70'
+      - '82'
       server:
       - h2o/2.2.2
       content-type:
@@ -33,14 +33,14 @@ http_interactions:
       access-control-allow-headers:
       - Origin, X-Requested-With, Content-Type, Accept
       x-ohr-status:
-      - m, 25934, 20171211-014817.650, 102765.455
+      - m, 25883, 20171211-014813.205, 115017.171
       etag:
-      - W/"46-sLyGczO0mD2rVz77wEQxcnfs5zI"
+      - W/"52-8tdamrxkn/VW1njBrsbP7xSCi2o"
       front-end-https:
       - 'on'
     body:
       encoding: UTF-8
-      string: '{"domain":"gray-hyuga-2415.lolipop.io","sub_domain":"gray-hyuga-2415"}'
+      string: '{"domain":"awesome-kurosaki-4084.lolipop.io","sub_domain":"awesome-kurosaki-4084"}'
     http_version: 
-  recorded_at: Tue, 12 Dec 2017 06:20:58 GMT
+  recorded_at: Tue, 12 Dec 2017 09:45:05 GMT
 recorded_with: VCR 3.0.3

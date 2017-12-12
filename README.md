@@ -33,7 +33,7 @@ end
 
 ```ruby
 Lolp.projects
-Lolp.create_project(:rails, 'db_password') # :wordpress, :php, ...
+Lolp.create_project(:rails, db_password: 'db_password') # :wordpress, :php, ...
 Lolp.delete_project('jungly-naha-2778')
 Lolp.create_custom_domain('jungly-naha-2778.lolipop.ohr','example.com')
 Lolp.delete_custom_domain('jungly-naha-2778.lolipop.ohr','example.com')
