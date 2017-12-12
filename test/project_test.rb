@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'securerandom'
 
 class ProjectTest < Minitest::Test
   def test_projects
@@ -19,18 +20,18 @@ class ProjectTest < Minitest::Test
 
   def test_create_project
     VCR.use_cassette('create_project') do
-      response = Lolp.create_project(:rails)
-      assert_equal 200, response.status
-      refute_nil response.body['project_name']
+      response = Lolp.create_project(:rails, test_db_password)
+      assert_equal 201, response.status
       refute_nil response.body['domain']
+      refute_nil response.body['sub_domain']
     end
   end
 
   def test_create_project_faild
     VCR.use_cassette('create_project_faild') do
-      response = Lolp.create_project(:invalid_template)
+      response = Lolp.create_project(:invalid_template, test_db_password)
       assert_equal 400, response.status
-      assert_equal 'invalid haco_type', response.body['message']
+      assert_equal 'Bad Request', response.body
     end
   end
 

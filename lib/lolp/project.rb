@@ -4,8 +4,8 @@ module Lolp
       connection.get('projects')
     end
 
-    def create_project(template, params = {})
-      connection.post('projects', params.merge(haco_type: template))
+    def create_project(type, db_password, params = {})
+      connection.post('projects', params.merge(type: type, db_password: db_password))
     end
 
     def delete_project(name)
