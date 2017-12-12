@@ -5,10 +5,10 @@ http_interactions:
     uri: https://mc.lolipop.jp/api/projects
     body:
       encoding: UTF-8
-      string: '{"haco_type":"invalid_template"}'
+      string: '{"type":"invalid_template","db_password":"<PASSWORD>"}'
     headers:
       Authorization:
-      - "Bearer <TOKEN>"
+      - Bearer <TOKEN>
       User-Agent:
       - Faraday v0.13.1
       Content-Type:
@@ -16,29 +16,29 @@ http_interactions:
   response:
     status:
       code: 400
-      message:
+      message: 
     headers:
       date:
-      - Mon, 20 Nov 2017 03:46:06 GMT
+      - Tue, 12 Dec 2017 06:22:55 GMT
       connection:
       - close
       content-length:
-      - '31'
+      - '11'
       server:
       - h2o/2.2.2
       content-type:
-      - application/json; charset=utf-8
+      - text/plain; charset=utf-8
       access-control-allow-origin:
       - "*"
       access-control-allow-headers:
       - Origin, X-Requested-With, Content-Type, Accept
       x-ohr-status:
-      - s, 7185, 20171120-033258.870, 789.396
+      - m, 25934, 20171211-014817.650, 102879.644
       etag:
-      - W/"1f-bkYyp/eIQylLxFu7bGRqc7fIuoU"
+      - W/"b-EFiDB1U+dmqzx9Mo2UjcZ1SJPO8"
     body:
       encoding: UTF-8
-      string: '{"message":"invalid haco_type"}'
-    http_version:
-  recorded_at: Mon, 20 Nov 2017 03:46:03 GMT
+      string: Bad Request
+    http_version: 
+  recorded_at: Tue, 12 Dec 2017 06:22:52 GMT
 recorded_with: VCR 3.0.3
