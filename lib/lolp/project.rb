@@ -4,8 +4,8 @@ module Lolp
       connection.get('projects')
     end
 
-    def create_project(type, db_password, params = {})
-      connection.post('projects', params.merge(type: type, db_password: db_password))
+    def create_project(type, params = {})
+      connection.post('projects', params.merge(type: type))
     end
 
     def delete_project(name)

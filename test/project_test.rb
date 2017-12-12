@@ -17,9 +17,23 @@ class ProjectTest < Minitest::Test
     end
   end
 
-  def test_create_project
-    VCR.use_cassette('create_project') do
-      response = Lolp.create_project(:rails, test_db_password)
+  def test_create_wordpress_project
+    VCR.use_cassette('create_wordpress_project') do
+      response = Lolp.create_project(
+        :wordpress,
+        payload: {
+          username: test_username, password: test_password, email: test_email
+        }
+      )
+      assert_equal 201, response.status
+      refute_nil response.body['domain']
+      refute_nil response.body['sub_domain']
+    end
+  end
+
+  def test_create_rails_project
+    VCR.use_cassette('create_rails_project') do
+      response = Lolp.create_project(:rails, db_password: test_password)
       assert_equal 201, response.status
       refute_nil response.body['domain']
       refute_nil response.body['sub_domain']
@@ -28,7 +42,7 @@ class ProjectTest < Minitest::Test
 
   def test_create_project_faild
     VCR.use_cassette('create_project_faild') do
-      response = Lolp.create_project(:invalid_template, test_db_password)
+      response = Lolp.create_project(:invalid_template)
       assert_equal 400, response.status
       assert_equal 'Bad Request', response.body
     end
