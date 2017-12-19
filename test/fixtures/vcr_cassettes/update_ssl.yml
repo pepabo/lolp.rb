@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://mc.lolipop.jp/api/ssls/1
+    body:
+      encoding: UTF-8
+      string: '{"key":"example_key","crt":"example_crt"}'
+    headers:
+      Authorization:
+      - Bearer <TOKEN>
+      User-Agent:
+      - Faraday v0.13.1
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: Forbidden
+    headers:
+      date:
+      - Tue, 19 Dec 2017 07:01:55 GMT
+      connection:
+      - close
+      content-length:
+      - '29'
+      server:
+      - h2o/2.2.2
+      content-type:
+      - application/json; charset=utf-8
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+      x-ohr-status:
+      - m, 3863, 20171219-034931.618, 11546.202
+      x-ratelimit-limit:
+      - '500'
+      x-ratelimit-remaining:
+      - '498'
+      set-cookie:
+      - OHRT=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT
+      etag:
+      - W/"1d-KrN4h1qKMbvlPXZtYtPjaacM9Uw"
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 19 Dec 2017 07:01:55 GMT
+recorded_with: VCR 4.0.0
