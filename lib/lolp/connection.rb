@@ -21,6 +21,10 @@ module Lolp
       @connection.delete(path, params)
     end
 
+    def put(path, params = {})
+      @connection.put(path, params)
+    end
+
     private
 
     def connection
