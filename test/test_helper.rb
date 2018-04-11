@@ -3,8 +3,8 @@ require 'lolp'
 require 'minitest/autorun'
 require 'vcr'
 
-Lolp.configure do |config|
-  config.api_endpoint = 'https://mc.lolipop.jp/api'
+Lolp.configure do |c|
+  c.api_endpoint = 'https://api.mc.lolipop.jp'
 end
 
 VCR.configure do |config|
@@ -23,7 +23,7 @@ VCR.configure do |config|
     interaction.request.headers['Authorization'].first
   end
   config.ignore_request do |request|
-    URI(request.uri).path == '/api/login'
+    URI(request.uri).path == '/v1/authenticate'
   end
 end
 
