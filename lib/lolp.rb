@@ -11,7 +11,6 @@ module Lolp
       if client.respond_to?(method_name)
         return client.send(method_name, *args, &block)
       end
-
       super
     end
   end
