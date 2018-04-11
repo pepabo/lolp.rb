@@ -4,7 +4,7 @@ require 'minitest/autorun'
 require 'vcr'
 
 Lolp.configure do |config|
-  config.api_endpoint = 'https://mc.lolipop.jp/api'
+  config.api_endpoint = 'https://api.mc.lolipop.jp/v1'
 end
 
 VCR.configure do |config|
