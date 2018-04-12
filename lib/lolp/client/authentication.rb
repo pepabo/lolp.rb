@@ -1,8 +1,10 @@
 module Lolp
   class Client
     module Authentication
-      def authenticate(username, password)
-        @token = post('v1/authenticate', username: username, password: password)
+      def authenticate(username = nil, password = nil)
+        @token = post('v1/authenticate',
+          username: username || @username,
+          password: password || @password)
       end
       alias login authenticate
     end
