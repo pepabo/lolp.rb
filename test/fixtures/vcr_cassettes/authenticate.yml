@@ -1,11 +1,11 @@
 ---
 http_interactions:
 - request:
-    method: delete
-    uri: https://api.mc.lolipop.jp/v1/projects/lolp-rb-test
+    method: post
+    uri: https://api.mc.lolipop.jp/v1/authenticate
     body:
-      encoding: US-ASCII
-      string: ''
+      encoding: UTF-8
+      string: '{"username":"<USERNAME>","password":"<PASSWORD>"}'
     headers:
       User-Agent:
       - lolp/0.2.1 (+https://github.com/pepabo/lolp.rb; ruby2.4.3)
@@ -15,15 +15,19 @@ http_interactions:
       - Bearer <TOKEN>
   response:
     status:
-      code: 204
-      message: No Content
+      code: 200
+      message: OK
     headers:
       date:
-      - Thu, 12 Apr 2018 06:17:18 GMT
+      - Thu, 12 Apr 2018 06:26:57 GMT
       connection:
       - close
+      content-length:
+      - '255'
       server:
       - h2o/2.2.2
+      content-type:
+      - application/json; charset=utf-8
       access-control-allow-origin:
       - "*"
       access-control-allow-headers:
@@ -37,7 +41,7 @@ http_interactions:
       x-content-type-options:
       - nosniff
       x-ohr-status:
-      - m, 4126, 20180412-032126.972, 10553.175
+      - m, 4161, 20180412-032129.842, 11130.097
       content-security-policy:
       - 'default-src ''self''; connect-src ''self''; font-src https://fonts.gstatic.com
         https://use.fontawesome.com; img-src ''self'' data: http://cache.img.gmo.jp
@@ -49,12 +53,12 @@ http_interactions:
         https://p01.mul-pay.jp https://pt01.mul-pay.jp https://www.google-analytics.com
         https://www.googletagmanager.com; manifest-src ''self'''
       etag:
-      - W/"a-bAsFyilMr4Ra1hIU5PyoyFRunpI"
+      - W/"ff-8nU2khEWbcKFoJOFp/swHGEBspQ"
       front-end-https:
       - 'on'
     body:
       encoding: UTF-8
-      string: ''
+      string: '"XXXXXXAiOiJKV1QiLCJhXXXXXiJIUzI1NiJ9.eyJzdWIiOiIwZTk4ZGNlOC00ZDAwLTQ1MjQtOTE2Ni04M2Q1N2RjMDJhMDkiLXXXXXQiOjE1MjM1MTQ0MTcsImV4cCI6MTUyNDcyNDAxNywidXNlcl9pZCI6IjlkZTY2NTU2LTZhMDMtNDg3ZS1hNDNiLWNlZGQwNjk2MzcxYyJ9.p4nKDQT2-fYF746flIs91nuSJ_CCBYYokPYikeF4Qns"'
     http_version: 
-  recorded_at: Thu, 12 Apr 2018 06:17:18 GMT
+  recorded_at: Thu, 12 Apr 2018 06:26:57 GMT
 recorded_with: VCR 4.0.0

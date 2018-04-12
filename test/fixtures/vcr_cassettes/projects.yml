@@ -2,26 +2,28 @@
 http_interactions:
 - request:
     method: get
-    uri: https://mc.lolipop.jp/api/projects
+    uri: https://api.mc.lolipop.jp/v1/projects
     body:
       encoding: US-ASCII
       string: ''
     headers:
-      Authorization:
-      - "Bearer <TOKEN>"
       User-Agent:
-      - Faraday v0.13.1
+      - lolp/0.2.1 (+https://github.com/pepabo/lolp.rb; ruby2.4.3)
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <TOKEN>
   response:
     status:
       code: 200
-      message:
+      message: OK
     headers:
       date:
-      - Mon, 20 Nov 2017 03:45:36 GMT
+      - Thu, 12 Apr 2018 06:01:23 GMT
       connection:
       - close
       content-length:
-      - '2455'
+      - '8716'
       server:
       - h2o/2.2.2
       content-type:
@@ -30,15 +32,33 @@ http_interactions:
       - "*"
       access-control-allow-headers:
       - Origin, X-Requested-With, Content-Type, Accept
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode = block
+      x-content-type-options:
+      - nosniff
       x-ohr-status:
-      - s, 7167, 20171120-033256.839, 761.339
+      - m, 4265, 20180412-032136.205, 9590.543
+      content-security-policy:
+      - 'default-src ''self''; connect-src ''self''; font-src https://fonts.gstatic.com
+        https://use.fontawesome.com; img-src ''self'' data: http://cache.img.gmo.jp
+        https://cache.img.gmo.jp https://s.gravatar.com https://www.google-analytics.com
+        https://www.google.co.jp https://social-plugins.line.me/widget/share https://stats.g.doubleclick.net;
+        style-src ''unsafe-inline'' https://cache.img.gmo.jp https://fonts.googleapis.com
+        https://use.fontawesome.com; frame-src https://social-plugins.line.me; script-src
+        ''self'' ''unsafe-inline'' https://cache.img.gmo.jp https://d.line-scdn.net
+        https://p01.mul-pay.jp https://pt01.mul-pay.jp https://www.google-analytics.com
+        https://www.googletagmanager.com; manifest-src ''self'''
       etag:
-      - W/"997-cPzggUp7bOzFmaezAnzSXhxtAjM"
+      - W/"220c-2dx0khrnhYp7MHA5uc3qYEPcZKw"
       front-end-https:
       - 'on'
     body:
       encoding: UTF-8
-      string: '[{"id":776,"created_at":"2017-11-20T03:44:57.688255Z","updated_at":"2017-11-20T03:44:57.688255Z","domain":"tight-ureshino-5550.staging.lolipop.io","account_humane_id":"dark-beppu-2101","svm":"","volume":"","base_spec":{"cpuset_cpus":"11","cpu_cfs_period_us":"100000","cpu_cfs_quota_us":"30000","memory_limit_in_bytes":"536870912","memory_memsw_limit_in_bytes":"536870912","netns":"netns_","veth_prefix":""},"container_templates":[{"hacofile":"rails.haco","ports":null,"num":1},{"hacofile":"gitpush-ruby.haco","ports":[{"id":0,"created_at":"0001-01-01T00:00:00Z","updated_at":"0001-01-01T00:00:00Z","port":22,"protocol":0,"container_id":null,"compute_connection":null}],"num":1}],"managed_config":{"db_name":"dark-beppu-2101_scic","db_user":"dark-beppu-2101_5xis7"},"custom_domains":null,"containers":[{"id":4803,"created_at":"2017-11-20T03:44:57.689594Z","updated_at":"2017-11-20T03:44:57.697801Z","cid":"tight-ureshino-5550.staging.lolipop.io-1af6f6265c","project_id":776,"status":1,"hacofile":"rails.haco","spec":{"cpuset_cpus":"11","cpu_cfs_period_us":"100000","cpu_cfs_quota_us":"30000","memory_limit_in_bytes":"536870912","memory_memsw_limit_in_bytes":"536870912","netns":"netns_1af6f6265c","veth_prefix":"1af6f6265c"},"last_error":"","ip_address":{"id":2587,"created_at":"2017-07-24T18:51:44.402247Z","updated_at":"2017-11-20T03:44:57.698843Z","container_ip":"10.1.11.38/16","compute_ip":"10.51.78.206","container_id":4803},"ports":[{"id":4803,"created_at":"2017-11-20T03:44:57.690638Z","updated_at":"2017-11-20T03:44:57.699601Z","port":443,"protocol":0,"container_id":4803,"compute_connection":null}],"project":null},{"id":4804,"created_at":"2017-11-20T03:44:57.691467Z","updated_at":"2017-11-20T03:44:57.703182Z","cid":"tight-ureshino-5550.staging.lolipop.io-7772f2f8e2","project_id":776,"status":1,"hacofile":"gitpush-ruby.haco","spec":{"cpuset_cpus":"11","cpu_cfs_period_us":"100000","cpu_cfs_quota_us":"30000","memory_limit_in_bytes":"536870912","memory_memsw_limit_in_bytes":"536870912","netns":"netns_7772f2f8e2","veth_prefix":"7772f2f8e2"},"last_error":"","ip_address":{"id":2588,"created_at":"2017-07-24T18:51:44.406318Z","updated_at":"2017-11-20T03:44:57.704041Z","container_ip":"10.1.11.39/16","compute_ip":"10.51.78.206","container_id":4804},"ports":[{"id":4804,"created_at":"2017-11-20T03:44:57.692428Z","updated_at":"2017-11-20T03:44:57.708665Z","port":22,"protocol":0,"container_id":4804,"compute_connection":null}],"project":null}]}]'
-    http_version:
-  recorded_at: Mon, 20 Nov 2017 03:45:33 GMT
-recorded_with: VCR 3.0.3
+      string: '[{"id":"58b22c80-5c64-41ed-ac51-7ca0c695e592","backendProjectID":"41c922d3-68d0-4505-a0e1-e0d0354aec8f","userID":"9de66556-6a03-487e-a43b-cedd0696371c","status":0,"name":"linyows-rails-1.lolipop.io","kind":"rails","paymentID":null,"createdAt":"2018-02-13T08:36:06.380Z","updatedAt":"2018-02-13T08:36:06.380Z"},{"id":"507dbd34-d6af-49d5-9d3d-98933c02a019","backendProjectID":"ae331ad3-f9ce-458d-aaac-15b6a524c18b","userID":"9de66556-6a03-487e-a43b-cedd0696371c","status":0,"name":"linyows-php-1.lolipop.io","kind":"php","paymentID":null,"createdAt":"2018-02-15T09:58:16.345Z","updatedAt":"2018-02-15T09:58:16.345Z"},{"id":"b3585f32-2265-418e-a762-45894620e1e0","backendProjectID":"f8510cf8-7dbf-4b47-b160-bd321b590911","userID":"9de66556-6a03-487e-a43b-cedd0696371c","status":0,"name":"wpwpwp.lolipop.io","kind":"wordpress","paymentID":null,"createdAt":"2018-02-15T09:58:16.478Z","updatedAt":"2018-02-15T09:58:16.478Z"},{"id":"105bff28-75b7-4c44-bbe2-10b8d9e87329","backendProjectID":"9b40f42e-6c91-4cba-9991-caaa17349b4b","userID":"9de66556-6a03-487e-a43b-cedd0696371c","status":0,"name":"windy-arita-7189.lolipop.io","kind":"wordpress","paymentID":null,"createdAt":"2018-02-15T09:58:16.792Z","updatedAt":"2018-02-15T09:58:16.792Z"},{"id":"46fb37f8-a6e5-4a24-b7bf-43b7ea2baedb","backendProjectID":"958772bc-a02f-4c80-9fd5-e5779e8ccb51","userID":"9de66556-6a03-487e-a43b-cedd0696371c","status":0,"name":"linyows-wp-1.lolipop.io","kind":"wordpress","paymentID":null,"createdAt":"2018-02-15T09:58:20.550Z","updatedAt":"2018-02-15T09:58:20.550Z"},{"id":"1cbdef07-5a38-48db-b1b3-2f0335e7a84d","backendProjectID":"59edc090-7c1c-462c-979a-b9f8bc1d398f","userID":"9de66556-6a03-487e-a43b-cedd0696371c","status":0,"name":"wpwp.lolipop.io","kind":"wordpress","paymentID":null,"createdAt":"2018-02-15T09:58:20.658Z","updatedAt":"2018-02-15T09:58:20.658Z"},{"id":"d1a0338d-b5ae-4971-bbff-17b97a08f6e7","backendProjectID":"db814419-5169-476f-a145-2d753dadfacc","userID":"9de66556-6a03-487e-a43b-cedd0696371c","status":0,"name":"rapid-kurosaki-5345.lolipop.io","kind":"wordpress","paymentID":null,"createdAt":"2018-02-15T09:58:16.486Z","updatedAt":"2018-02-15T09:58:16.486Z"},{"id":"2db2ed73-a95b-4af4-ac59-cdf2dbb4ebac","backendProjectID":"d0614ccf-4419-47e5-a64d-96a32da9ba9e","userID":"9de66556-6a03-487e-a43b-cedd0696371c","status":0,"name":"pipo-1.lolipop.io","kind":"node","paymentID":null,"createdAt":"2018-03-01T04:44:34.227Z","updatedAt":"2018-03-01T04:44:34.227Z"},{"id":"e2980b76-8a8e-488b-b79b-f3db815a4f58","backendProjectID":"99f591cf-e447-4518-96ae-f4f489fe044d","userID":"9de66556-6a03-487e-a43b-cedd0696371c","status":0,"name":"linyows-node-2.lolipop.io","kind":"node","paymentID":null,"createdAt":"2018-03-05T10:11:30.880Z","updatedAt":"2018-03-05T10:11:30.880Z"},{"id":"8e18005a-395f-427b-a4e2-71c6a3ce3236","backendProjectID":"f517cdb8-bddf-4290-b1e1-c295187f53b3","userID":"9de66556-6a03-487e-a43b-cedd0696371c","status":0,"name":"linyows.lolipop.io","kind":"php","paymentID":null,"createdAt":"2018-04-11T03:48:06.727Z","updatedAt":"2018-04-11T03:48:06.727Z"},{"id":"b9577c75-1729-4e87-84b2-a45a941a52dd","backendProjectID":"4bf33965-f83e-47be-8117-2142b18d3526","userID":"9de66556-6a03-487e-a43b-cedd0696371c","status":0,"name":"romantic-isahaya-7385.lolipop.io","kind":"wordpress","paymentID":null,"createdAt":"2018-04-03T08:14:49.623Z","updatedAt":"2018-04-03T08:14:49.623Z"},{"id":"9b6608b1-759f-45e1-8dfa-272f7139bcb4","backendProjectID":"124a1e71-bb21-4999-9523-9db23d44abe0","userID":"9de66556-6a03-487e-a43b-cedd0696371c","status":0,"name":"damp-tsukumi-9678.lolipop.io","kind":"rails","paymentID":null,"createdAt":"2018-04-03T16:57:06.228Z","updatedAt":"2018-04-03T16:57:06.228Z"},{"id":"c6f1d838-c523-4b48-9a83-d4afaaea179e","backendProjectID":"c5291ae9-04d1-42ca-b18a-3c4c83421961","userID":"9de66556-6a03-487e-a43b-cedd0696371c","status":0,"name":"nameless-yame-3252.lolipop.io","kind":"rails","paymentID":null,"createdAt":"2018-04-03T16:59:21.855Z","updatedAt":"2018-04-03T16:59:21.855Z"},{"id":"04b1bc79-cce2-4069-9678-5263299826b8","backendProjectID":"3f049070-f8b6-438e-a059-9cfb8d01e916","userID":"9de66556-6a03-487e-a43b-cedd0696371c","status":0,"name":"summer-hirado-8733.lolipop.io","kind":"rails","paymentID":null,"createdAt":"2018-04-03T17:07:17.077Z","updatedAt":"2018-04-03T17:07:17.077Z"},{"id":"b5a05782-97f0-4a39-bbc8-ac4b50709e43","backendProjectID":"0b9ead23-8216-487c-9b38-480ccaa7df60","userID":"9de66556-6a03-487e-a43b-cedd0696371c","status":0,"name":"fast-yufuin-3424.lolipop.io","kind":"node","paymentID":null,"createdAt":"0001-01-01T00:00:00.000Z","updatedAt":"2018-04-03T17:26:07.499Z"},{"id":"43824830-2f48-405c-806a-60508b58d701","backendProjectID":"5af4ac0d-201c-4324-bdd6-eb63d77425ba","userID":"9de66556-6a03-487e-a43b-cedd0696371c","status":0,"name":"ancient-tosu-5375.lolipop.io","kind":"wordpress","paymentID":null,"createdAt":"2018-04-05T01:20:56.213Z","updatedAt":"2018-04-05T01:20:56.213Z"},{"id":"94c4df8f-d9af-4b2b-ba19-3f6996e5415b","backendProjectID":"befa491b-e54b-4cc0-8231-cdabe5a5a342","userID":"9de66556-6a03-487e-a43b-cedd0696371c","status":0,"name":"broad-amami-8463.lolipop.io","kind":"wordpress","paymentID":null,"createdAt":"2018-04-05T01:21:50.785Z","updatedAt":"2018-04-05T01:21:50.785Z"},{"id":"8ee88845-dfd4-4cbf-b692-dbd3d55c463a","backendProjectID":"50c58bad-d1a9-4f4b-9f03-3d7976b7eed7","userID":"9de66556-6a03-487e-a43b-cedd0696371c","status":0,"name":"passionate-miyakojima-2064.lolipop.io","kind":"wordpress","paymentID":null,"createdAt":"2018-04-05T04:01:19.644Z","updatedAt":"2018-04-05T04:01:19.644Z"},{"id":"394772b0-01cf-4113-a805-6c85f87157d7","backendProjectID":"fc6ad20d-a6e7-4701-9440-c7f13ef2133e","userID":"9de66556-6a03-487e-a43b-cedd0696371c","status":0,"name":"young-naha-8721.lolipop.io","kind":"wordpress","paymentID":null,"createdAt":"2018-04-05T06:27:57.764Z","updatedAt":"2018-04-05T06:27:57.764Z"},{"id":"b789a4da-25fc-40eb-8258-42fefc955421","backendProjectID":"7a2fe0a5-1f6f-4c0a-8090-85d104ad328e","userID":"9de66556-6a03-487e-a43b-cedd0696371c","status":0,"name":"jolly-tagawa-8412.lolipop.io","kind":"wordpress","paymentID":null,"createdAt":"2018-04-05T06:30:37.476Z","updatedAt":"2018-04-05T06:30:37.476Z"},{"id":"dbe9cc6f-e857-4078-a0ad-b4f772ee098a","backendProjectID":"7bfe57e6-5c2e-443b-b1e8-16150f183d81","userID":"9de66556-6a03-487e-a43b-cedd0696371c","status":0,"name":"ancient-akune-9714.lolipop.io","kind":"wordpress","paymentID":null,"createdAt":"2018-04-05T06:34:28.907Z","updatedAt":"2018-04-05T06:34:28.907Z"},{"id":"8d7cb340-da5c-4b91-b954-dd6397167e66","backendProjectID":"6ea6241c-3832-4a35-ac1e-6c96f01bb50e","userID":"9de66556-6a03-487e-a43b-cedd0696371c","status":0,"name":"tight-dazaifu-5126.lolipop.io","kind":"wordpress","paymentID":null,"createdAt":"2018-04-05T06:35:04.816Z","updatedAt":"2018-04-05T06:35:04.816Z"},{"id":"c32c9d5b-8d8f-4d21-845a-70656f364ce5","backendProjectID":"91166c21-4133-49cf-829f-f8df8fcef386","userID":"9de66556-6a03-487e-a43b-cedd0696371c","status":0,"name":"plain-hitoyoshi-0478.lolipop.io","kind":"rails","paymentID":null,"createdAt":"2018-04-05T08:22:35.275Z","updatedAt":"2018-04-05T08:22:35.275Z"},{"id":"145adafa-8ca1-4a7a-88d7-b91a79c0ef7f","backendProjectID":"cdd32ae5-c118-4fc9-b9d6-ea5ad18f3737","userID":"9de66556-6a03-487e-a43b-cedd0696371c","status":0,"name":"long-ureshino-0388.lolipop.io","kind":"wordpress","paymentID":null,"createdAt":"2018-04-05T08:23:25.397Z","updatedAt":"2018-04-05T08:23:25.397Z"},{"id":"73dffd6a-6a5e-40fd-a124-0b422e166b17","backendProjectID":"5b57fec5-951c-487c-a471-92cafe932838","userID":"9de66556-6a03-487e-a43b-cedd0696371c","status":0,"name":"lively-kokubu-4320.lolipop.io","kind":"node","paymentID":null,"createdAt":"2018-04-06T14:13:41.098Z","updatedAt":"2018-04-06T14:13:41.098Z"},{"id":"6495682d-2a1d-4d09-8e91-bd5c679fcffe","backendProjectID":"b7e8ba8d-524a-4557-82a7-420b19521f93","userID":"9de66556-6a03-487e-a43b-cedd0696371c","status":0,"name":"sweet-maebaru-3839.lolipop.io","kind":"rails","paymentID":null,"createdAt":"2018-04-06T14:37:43.357Z","updatedAt":"2018-04-06T14:37:43.357Z"},{"id":"823563d3-f45f-490f-9973-f82390291a11","backendProjectID":"dfae171b-b16e-46ec-8dfb-7765ad6d0364","userID":"9de66556-6a03-487e-a43b-cedd0696371c","status":0,"name":"linyows-rails-10.lolipop.io","kind":"rails","paymentID":null,"createdAt":"2018-04-06T14:38:07.468Z","updatedAt":"2018-04-06T14:38:07.468Z"},{"id":"fbed1a41-57b5-49b5-bed4-e9966d5a010a","backendProjectID":"de2fd76f-a68d-4806-ad45-32cf624d9f9e","userID":"9de66556-6a03-487e-a43b-cedd0696371c","status":0,"name":"green-ibusuki-4323.lolipop.io","kind":"php","paymentID":null,"createdAt":"2018-04-06T14:39:51.816Z","updatedAt":"2018-04-06T14:39:51.816Z"}]'
+    http_version: 
+  recorded_at: Thu, 12 Apr 2018 06:01:23 GMT
+recorded_with: VCR 4.0.0
