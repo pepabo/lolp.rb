@@ -1,9 +1,8 @@
 require 'faraday'
+require 'lolp/errors'
 require 'faraday_middleware'
 
 module Lolp
-  class Error < StandardError; end
-
   module Connection
     def get(path, params = {})
       request(:get, path, params)
@@ -35,32 +34,13 @@ module Lolp
           }
         end
 
-      simplize_response @last_response
+      if error = Error.from_response(@last_response)
+        raise error
+      end
+      @last_response.body
     end
 
     private
-
-    def simplize_response(res)
-      if [200, 201, 202, 204].include?(res.status)
-      else
-        res
-      end
-      case res.status
-      when 200, 201, 202, 204
-        res.body
-      when 400, 401, 404, 422
-        Error.new(build_error_message(res))
-      end
-    end
-
-    def build_error_message(res = nil)
-      return nil if res.nil?
-      message =  "#{res[:method].to_s.upcase} "
-      message << "#{res[:url]}: "
-      message << "#{res[:status]} - "
-      message << "#{res.body}" if res.body
-      message
-    end
 
     def connection
       project_url = 'https://github.com/pepabo/lolp.rb'
