@@ -24,7 +24,13 @@ module Lolp
       @last_response if defined? @last_response
     end
 
+    def auto_loginable?(url)
+      !authenticated? && url !~ /\/authenticate/ && @username && @password
+    end
+
     def request(method, url = nil, data = nil, headers = nil, &block)
+      login if auto_loginable?(url)
+
       @last_response = if %i(post put patch).include?(method)
           connection.run_request(method, url, data, headers, &block)
         else
