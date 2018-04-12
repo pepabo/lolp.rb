@@ -1,44 +1,62 @@
 ---
 http_interactions:
 - request:
-    method: get
-    uri: https://mc.lolipop.jp/api/projects
+    method: post
+    uri: https://api.mc.lolipop.jp/v1/authenticate
     body:
-      encoding: US-ASCII
-      string: ''
+      encoding: UTF-8
+      string: '{"username":"foo@example.com","password":"Secret-Ruby-123@"}'
     headers:
-      Authorization:
-      - "Bearer <TOKEN>"
       User-Agent:
-      - Faraday v0.13.1
+      - lolp/0.2.1 (+https://github.com/pepabo/lolp.rb; ruby2.4.3)
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <TOKEN>
   response:
     status:
-      code: 403
-      message:
+      code: 401
+      message: Unauthorized
     headers:
       date:
-      - Mon, 20 Nov 2017 03:47:21 GMT
+      - Thu, 12 Apr 2018 06:26:57 GMT
       connection:
       - close
       content-length:
-      - '46'
+      - '12'
       server:
       - h2o/2.2.2
       content-type:
-      - application/json; charset=utf-8
+      - text/plain; charset=utf-8
       access-control-allow-origin:
       - "*"
       access-control-allow-headers:
       - Origin, X-Requested-With, Content-Type, Accept
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode = block
+      x-content-type-options:
+      - nosniff
       x-ohr-status:
-      - s, 7161, 20171120-033256.789, 866.429
-      set-cookie:
-      - OHRT=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT
+      - m, 4155, 20180412-032129.932, 11130.272
+      content-security-policy:
+      - 'default-src ''self''; connect-src ''self''; font-src https://fonts.gstatic.com
+        https://use.fontawesome.com; img-src ''self'' data: http://cache.img.gmo.jp
+        https://cache.img.gmo.jp https://s.gravatar.com https://www.google-analytics.com
+        https://www.google.co.jp https://social-plugins.line.me/widget/share https://stats.g.doubleclick.net;
+        style-src ''unsafe-inline'' https://cache.img.gmo.jp https://fonts.googleapis.com
+        https://use.fontawesome.com; frame-src https://social-plugins.line.me; script-src
+        ''self'' ''unsafe-inline'' https://cache.img.gmo.jp https://d.line-scdn.net
+        https://p01.mul-pay.jp https://pt01.mul-pay.jp https://www.google-analytics.com
+        https://www.googletagmanager.com; manifest-src ''self'''
       etag:
-      - W/"2e-Xz4RglkgMI7u9o1IPumTQCVhx6s"
+      - W/"c-dAuDFQrdjS3hezqxDTNgW7AOlYk"
     body:
       encoding: UTF-8
-      string: '{"errors":["Not enough or too many segments"]}'
-    http_version:
-  recorded_at: Mon, 20 Nov 2017 03:47:18 GMT
-recorded_with: VCR 3.0.3
+      string: Unauthorized
+    http_version: 
+  recorded_at: Thu, 12 Apr 2018 06:26:57 GMT
+recorded_with: VCR 4.0.0

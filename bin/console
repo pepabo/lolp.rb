@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'lolp'
+require 'awesome_print'
+require 'pry'
+Pry.start

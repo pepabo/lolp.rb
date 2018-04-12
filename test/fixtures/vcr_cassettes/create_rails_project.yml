@@ -2,28 +2,28 @@
 http_interactions:
 - request:
     method: post
-    uri: https://mc.lolipop.jp/api/projects
+    uri: https://api.mc.lolipop.jp/v1/projects
     body:
       encoding: UTF-8
-      string: '{"db_password":"<PASSWORD>","type":"rails"}'
+      string: '{"db_password":"FoobarSecretPW123$#","sub_domain":"lolp-rb-test","type":"rails"}'
     headers:
-      Authorization:
-      - Bearer <TOKEN>
       User-Agent:
-      - Faraday v0.13.1
+      - lolp/0.2.1 (+https://github.com/pepabo/lolp.rb; ruby2.4.3)
       Content-Type:
       - application/json
+      Authorization:
+      - Bearer <TOKEN>
   response:
     status:
       code: 201
-      message: 
+      message: Created
     headers:
       date:
-      - Tue, 12 Dec 2017 09:45:08 GMT
+      - Thu, 12 Apr 2018 06:09:49 GMT
       connection:
       - close
       content-length:
-      - '82'
+      - '64'
       server:
       - h2o/2.2.2
       content-type:
@@ -32,15 +32,33 @@ http_interactions:
       - "*"
       access-control-allow-headers:
       - Origin, X-Requested-With, Content-Type, Accept
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode = block
+      x-content-type-options:
+      - nosniff
       x-ohr-status:
-      - m, 25883, 20171211-014813.205, 115017.171
+      - m, 4265, 20180412-032136.205, 10095.897
+      content-security-policy:
+      - 'default-src ''self''; connect-src ''self''; font-src https://fonts.gstatic.com
+        https://use.fontawesome.com; img-src ''self'' data: http://cache.img.gmo.jp
+        https://cache.img.gmo.jp https://s.gravatar.com https://www.google-analytics.com
+        https://www.google.co.jp https://social-plugins.line.me/widget/share https://stats.g.doubleclick.net;
+        style-src ''unsafe-inline'' https://cache.img.gmo.jp https://fonts.googleapis.com
+        https://use.fontawesome.com; frame-src https://social-plugins.line.me; script-src
+        ''self'' ''unsafe-inline'' https://cache.img.gmo.jp https://d.line-scdn.net
+        https://p01.mul-pay.jp https://pt01.mul-pay.jp https://www.google-analytics.com
+        https://www.googletagmanager.com; manifest-src ''self'''
       etag:
-      - W/"52-8tdamrxkn/VW1njBrsbP7xSCi2o"
+      - W/"40-xgvTnlTFBQs52lplr+X+mIIHLSw"
       front-end-https:
       - 'on'
     body:
       encoding: UTF-8
-      string: '{"domain":"awesome-kurosaki-4084.lolipop.io","sub_domain":"awesome-kurosaki-4084"}'
+      string: '{"domain":"lolp-rb-test.lolipop.io","sub_domain":"lolp-rb-test"}'
     http_version: 
-  recorded_at: Tue, 12 Dec 2017 09:45:05 GMT
-recorded_with: VCR 3.0.3
+  recorded_at: Thu, 12 Apr 2018 06:09:49 GMT
+recorded_with: VCR 4.0.0
