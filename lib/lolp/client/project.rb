@@ -5,6 +5,10 @@ module Lolp
         get('v1/projects')
       end
 
+      def project(name)
+        get("v1/projects/#{name}")
+      end
+
       def create_project(type, params = {})
         post('v1/projects', params.merge(type: type))
       end
