@@ -1,21 +1,16 @@
 module Lolp
   module Configuration
-    def config
-      @config ||= Config.new
-    end
+    attr_accessor :api_endpoint, :username, :password, :token
 
     def configure
-      yield config
+      yield self
     end
 
-    class Config
-      attr_accessor :api_endpoint, :username, :password
-
-      def initialize
-        @api_endpoint = ENV['LOLIPOP_MC_API_ENDPOINT'] || 'https://mc.lolipop.jp/api'
-        @username = ENV['LOLIPOP_MC_USERNAME']
-        @password = ENV['LOLIPOP_MC_PASSWORD']
-      end
+    def defaults
+      @api_endpoint = ENV['LOLIPOP_MC_API_ENDPOINT'] || 'https://api.mc.lolipop.jp/'
+      @username = ENV['LOLIPOP_MC_USERNAME']
+      @password = ENV['LOLIPOP_MC_PASSWORD']
+      @token = ENV['LOLIPOP_MC_TOKEN']
     end
   end
 end
