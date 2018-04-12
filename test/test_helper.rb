@@ -20,21 +20,24 @@ VCR.configure do |config|
     test_email
   end
   config.filter_sensitive_data("Bearer <TOKEN>") do |interaction|
-    interaction.request.headers['Authorization'].first
-  end
-  config.ignore_request do |request|
-    URI(request.uri).path == '/v1/authenticate'
+    if interaction.request.headers['Authorization']
+      interaction.request.headers['Authorization'].first
+    end
   end
 end
 
 def test_password
-  'x' * 20
+  ENV['TEST_PASSWORD']
 end
 
 def test_username
-  'x' * 5
+  ENV['TEST_USERNAME']
 end
 
 def test_email
   'test@example.com'
+end
+
+def test_subdomain
+  'lolp-rb-test'
 end
