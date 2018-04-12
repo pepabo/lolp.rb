@@ -3,96 +3,87 @@ require 'test_helper'
 class ProjectTest < Minitest::Test
   def test_projects
     VCR.use_cassette('projects') do
-      response = Lolp.projects
-      assert_equal 200, response.status
-      refute_nil response.body.first['domain']
-    end
-  end
-
-  def test_authenticate_faild
-    VCR.use_cassette('authenticate_faild') do
-      response = Lolp.projects
-      assert_equal 403, response.status
-      assert_equal 'Not enough or too many segments', response.body['errors'].first
+      projects = Lolp.projects
+      assert_equal 200, Lolp.last_response.status
+      assert_equal projects.class, Array
     end
   end
 
   def test_create_wordpress_project
     VCR.use_cassette('create_wordpress_project') do
-      response = Lolp.create_project(
+      p = Lolp.create_project(
         :wordpress,
         payload: {
-          username: test_username, password: test_password, email: test_email
+          username: 'foobar',
+          password: 'FoobarSecretPW123$#',
+          email: 'foobar@example.com'
         }
       )
-      assert_equal 201, response.status
-      refute_nil response.body['domain']
-      refute_nil response.body['sub_domain']
+      assert_equal 201, Lolp.last_response.status
+      assert_equal p['domain'], 'agile-maebaru-4396.lolipop.io'
+      assert_equal p['sub_domain'], 'agile-maebaru-4396'
     end
   end
 
   def test_create_rails_project
     VCR.use_cassette('create_rails_project') do
-      response = Lolp.create_project(:rails, db_password: test_password)
-      assert_equal 201, response.status
-      refute_nil response.body['domain']
-      refute_nil response.body['sub_domain']
+      p = Lolp.create_project(
+        :rails,
+        db_password: 'FoobarSecretPW123$#',
+        sub_domain: test_subdomain
+      )
+      assert_equal 201, Lolp.last_response.status
+      assert_equal p['domain'], "#{test_subdomain}.lolipop.io"
+      assert_equal p['sub_domain'], test_subdomain
     end
   end
 
   def test_create_project_faild
     VCR.use_cassette('create_project_faild') do
-      response = Lolp.create_project(:invalid_template)
-      assert_equal 400, response.status
-      assert_equal 'Bad Request', response.body
-    end
-  end
-
-  def test_delete_project
-    VCR.use_cassette('delete_project') do
-      response = Lolp.delete_project('tight-ureshino-5550')
-      assert_equal 204, response.status
-      assert_equal '', response.body
-    end
-  end
-
-  def test_delete_project_faild
-    VCR.use_cassette('delete_project_faild') do
-      response = Lolp.delete_project('invalid-name')
-      assert_equal 500, response.status
-      assert_equal 'Internal Server Error', response.body
+      assert_raises Lolp::UnprocessableEntity do
+        Lolp.create_project(:invalid_template)
+      end
+      assert_equal 422, Lolp.last_response.status
     end
   end
 
   def test_create_custom_domain
     VCR.use_cassette('create_custom_domain') do
-      response = Lolp.create_custom_domain('jolly-hirado-0217.staging.lolipop.io', 'example.com')
-      assert_equal 201, response.status
-      assert_equal 'Created', response.body
+      Lolp.create_custom_domain("#{test_subdomain}.lolipop.io", 'example.com')
+      assert_equal 201, Lolp.last_response.status
     end
   end
 
   def test_create_custom_domain_faild
     VCR.use_cassette('create_custom_domain_faild') do
-      response = Lolp.create_custom_domain('invalid_domain', 'example.com')
-      assert_equal 500, response.status
-      assert_equal 'Internal Server Error', response.body
+      assert_raises Lolp::UnprocessableEntity do
+        Lolp.create_custom_domain("#{test_subdomain}.lolipop.io", 'examplecom')
+      end
+      assert_equal 422, Lolp.last_response.status
     end
   end
 
   def test_delete_custom_domain
     VCR.use_cassette('delete_custom_domain') do
-      response = Lolp.delete_custom_domain('jolly-hirado-0217.staging.lolipop.io', 'example.com')
-      assert_equal 204, response.status
-      assert_equal '', response.body
+      Lolp.delete_custom_domain("#{test_subdomain}.lolipop.io", 'example.com')
+      assert_equal 204, Lolp.last_response.status
     end
   end
 
-  def test_delete_custom_domain_faild
-    VCR.use_cassette('delete_custom_domain_faild') do
-      response = Lolp.delete_custom_domain('invalid_domain', 'example.com')
-      assert_equal 500, response.status
-      assert_equal 'Internal Server Error', response.body
+  def test_delete_project
+    VCR.use_cassette('delete_project') do
+      p = Lolp.delete_project(test_subdomain)
+      assert_equal 204, Lolp.last_response.status
+      assert_equal '', p
+    end
+  end
+
+  def test_delete_project_faild
+    VCR.use_cassette('delete_project_faild') do
+      assert_raises Lolp::NotFound do
+        Lolp.delete_project('invalid-name')
+      end
+      assert_equal 404, Lolp.last_response.status
     end
   end
 end
