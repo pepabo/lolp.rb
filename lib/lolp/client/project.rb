@@ -17,12 +17,12 @@ module Lolp
         delete("v1/projects/#{name}")
       end
 
-      def create_custom_domain(domain, custom_domain)
-        post("v1/projects/#{domain}/custom-domains", domain: custom_domain)
+      def create_custom_domain(project_domain, custom_domain)
+        post("v1/projects/#{project_domain}/custom-domains", domain: custom_domain)
       end
 
-      def delete_custom_domain(domain, custom_domain)
-        delete("v1/projects/#{domain}/custom-domains/#{custom_domain}")
+      def delete_custom_domain(project_domain, custom_domain)
+        delete("v1/projects/#{project_domain}/custom-domains/#{custom_domain}")
       end
     end
   end

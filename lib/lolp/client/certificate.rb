@@ -1,12 +1,12 @@
 module Lolp
   class Client
     module Certificate
-      def get_certificate(domain)
-        get("v1/certificates/#{domain}")
+      def get_certificate(project_domain)
+        get("v1/certificates/#{project_domain}")
       end
 
-      def create_certificate(domain)
-        post("v1/certificates/#{domain}")
+      def create_certificate(project_domain)
+        post("v1/certificates/#{project_domain}")
       end
     end
   end
