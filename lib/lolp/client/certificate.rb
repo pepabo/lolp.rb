@@ -1,7 +1,7 @@
 module Lolp
   class Client
     module Certificate
-      def certificate(domain)
+      def get_certificate(domain)
         get("v1/certificates/#{domain}")
       end
 
