@@ -1,6 +1,6 @@
 module Lolp
   class Client
-    module PublicKey
+    module Publickey
       def publickeys
         get('v1/pubkeys')
       end
