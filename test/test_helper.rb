@@ -2,6 +2,8 @@ $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 require 'lolp'
 require 'minitest/autorun'
 require 'vcr'
+require 'dotenv'
+Dotenv.load
 
 Lolp.configure do |c|
   c.api_endpoint = 'https://api.mc.lolipop.jp'
