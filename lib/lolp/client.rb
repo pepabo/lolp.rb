@@ -3,6 +3,7 @@ require 'lolp/configuration'
 require 'lolp/client/project'
 require 'lolp/client/authentication'
 require 'lolp/client/certificate'
+require 'lolp/client/publickey'
 
 module Lolp
   class Client
@@ -11,6 +12,7 @@ module Lolp
     include Lolp::Client::Project
     include Lolp::Client::Authentication
     include Lolp::Client::Certificate
+    include Lolp::Client::PublicKey
 
     def initialize(config = {})
       defaults
