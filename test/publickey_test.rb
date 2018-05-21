@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class PublicKeyTest < Minitest::Test
+class PublickeyTest < Minitest::Test
   def setup
     Lolp::Client.new
   end

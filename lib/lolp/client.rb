@@ -12,7 +12,7 @@ module Lolp
     include Lolp::Client::Project
     include Lolp::Client::Authentication
     include Lolp::Client::Certificate
-    include Lolp::Client::PublicKey
+    include Lolp::Client::Publickey
 
     def initialize(config = {})
       defaults
