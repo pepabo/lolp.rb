@@ -110,7 +110,7 @@ class ProjectTest < Minitest::Test
           email: 'foobar@example.com'
         }
       )
-      assert_raises Lolp::InternalServerError do
+      assert_raises Lolp::ServiceUnavailable do
         Lolp.project_storage(p['domain'])
       end
     end
