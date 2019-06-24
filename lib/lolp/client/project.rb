@@ -24,6 +24,10 @@ module Lolp
       def delete_custom_domain(project_domain, custom_domain)
         delete("v1/projects/#{project_domain}/custom-domains/#{custom_domain}")
       end
+
+      def project_storage(name)
+        get("v1/projects/#{name}/storage")
+      end
     end
   end
 end
