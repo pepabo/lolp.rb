@@ -99,7 +99,7 @@ class ProjectTest < Minitest::Test
   end
 
   def test_project_storage_faild
-    # タイミングにより、正しくパラメータを設定した時でも取得に失敗する時がある
+    # Occasionally request may fail. In that case, please retry.
     VCR.use_cassette('project_storage_faild') do
       Lolp.login(ENV['TEST_USERNAME'], ENV['TEST_PASSWORD'])
       p = Lolp.create_project(
