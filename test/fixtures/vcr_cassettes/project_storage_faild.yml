@@ -8,18 +8,16 @@ http_interactions:
       string: '{"username":"<USERNAME>","password":"<PASSWORD>"}'
     headers:
       User-Agent:
-      - lolp/0.5.0 (+https://github.com/pepabo/lolp.rb; ruby2.6.2)
+      - lolp/0.6.0 (+https://github.com/pepabo/lolp.rb; ruby2.6.2)
       Content-Type:
       - application/json
-      Authorization:
-      - Bearer <TOKEN>
   response:
     status:
       code: 200
       message: OK
     headers:
       date:
-      - Mon, 24 Jun 2019 04:13:08 GMT
+      - Mon, 24 Jun 2019 05:47:34 GMT
       connection:
       - close
       content-length:
@@ -39,7 +37,7 @@ http_interactions:
       x-content-type-options:
       - nosniff
       x-ohr-status:
-      - m, 1683, 20190624-034242.546, 1827.755
+      - m, 31365, 20190624-054054.298, 401.847
       content-security-policy:
       - 'connect-src ''self'' https://vc.hotjar.io https://*.hotjar.com:* wss://*.hotjar.com
         https://www.google-analytics.com; default-src ''self''; font-src ''self''
@@ -66,14 +64,14 @@ http_interactions:
       cache-control:
       - no-store
       etag:
-      - W/"13f-w6wps7XSKsUKuQkyetCIOMSnme4"
+      - W/"13f-cao3u6iqZMPDvGtyCgAlmz3S3Vg"
       front-end-https:
       - 'on'
     body:
       encoding: UTF-8
-      string: '"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxZmExODQ1NC1kOTc5LTRiODMtYWRkYi01NmEwNjQyMWFiYWMiLCJpYXQiOjE1NjEzNDk1ODgsImV4cCI6MTU2MjU1OTE4OCwidXNlcklkIjoiYmJlZjI2MTMtZTI4Yi00MDUyLWJlZmEtODVhNWU3NzVkNzUyIiwidXNlcl9pZCI6ImJiZWYyNjEzLWUyOGItNDA1Mi1iZWZhLTg1YTVlNzc1ZDc1MiJ9.PORxCH3JSKw3H9GBXDRSSaUnG55VVJoYdDRo1laKzSc"'
+      string: '"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI3NTA4N2U4NC02YjZiLTRlOGYtYTU2Ny03YmEwOGJmYTMwZTAiLCJpYXQiOjE1NjEzNTUyNTQsImV4cCI6MTU2MjU2NDg1NCwidXNlcklkIjoiYmJlZjI2MTMtZTI4Yi00MDUyLWJlZmEtODVhNWU3NzVkNzUyIiwidXNlcl9pZCI6ImJiZWYyNjEzLWUyOGItNDA1Mi1iZWZhLTg1YTVlNzc1ZDc1MiJ9.0ZCxmMwegBB_u6peBWUGJMajxlMp4P9wWXoj37hGCf4"'
     http_version: 
-  recorded_at: Mon, 24 Jun 2019 04:13:08 GMT
+  recorded_at: Mon, 24 Jun 2019 05:47:34 GMT
 - request:
     method: post
     uri: https://api.mc.lolipop.jp/v1/projects
@@ -82,7 +80,7 @@ http_interactions:
       string: '{"payload":{"username":"foobar","password":"FoobarSecretPW123$#","email":"foobar@example.com"},"type":"wordpress"}'
     headers:
       User-Agent:
-      - lolp/0.5.0 (+https://github.com/pepabo/lolp.rb; ruby2.6.2)
+      - lolp/0.6.0 (+https://github.com/pepabo/lolp.rb; ruby2.6.2)
       Content-Type:
       - application/json
       Authorization:
@@ -93,11 +91,11 @@ http_interactions:
       message: Created
     headers:
       date:
-      - Mon, 24 Jun 2019 04:13:09 GMT
+      - Mon, 24 Jun 2019 05:47:35 GMT
       connection:
       - close
       content-length:
-      - '118'
+      - '122'
       content-type:
       - application/json; charset=utf-8
       access-control-allow-origin:
@@ -113,7 +111,7 @@ http_interactions:
       x-content-type-options:
       - nosniff
       x-ohr-status:
-      - m, 4754, 20190624-034244.311, 1826.21
+      - m, 23077, 20190624-054051.569, 404.816
       content-security-policy:
       - 'connect-src ''self'' https://vc.hotjar.io https://*.hotjar.com:* wss://*.hotjar.com
         https://www.google-analytics.com; default-src ''self''; font-src ''self''
@@ -140,40 +138,40 @@ http_interactions:
       cache-control:
       - no-store
       etag:
-      - W/"76-oZfHLC1p1uJgSXyBz9dqO0gsXvY"
+      - W/"7a-FAZ5Jl0VeMEZEEu+b+LfVwee1KI"
       front-end-https:
       - 'on'
     body:
       encoding: UTF-8
-      string: '{"id":"e03a8250-d49d-498b-b869-e0f60fc6ab58","domain":"silent-saito-5295.lolipop.io","sub_domain":"silent-saito-5295"}'
+      string: '{"id":"a4772e6e-8d8f-42c0-95aa-d2ff8f15768a","domain":"dawn-kirishima-7553.lolipop.io","sub_domain":"dawn-kirishima-7553"}'
     http_version: 
-  recorded_at: Mon, 24 Jun 2019 04:13:09 GMT
+  recorded_at: Mon, 24 Jun 2019 05:47:35 GMT
 - request:
     method: get
-    uri: https://api.mc.lolipop.jp/v1/projects/silent-saito-5295.lolipop.io/storage
+    uri: https://api.mc.lolipop.jp/v1/projects/dawn-kirishima-7553.lolipop.io/storage
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - lolp/0.5.0 (+https://github.com/pepabo/lolp.rb; ruby2.6.2)
+      - lolp/0.6.0 (+https://github.com/pepabo/lolp.rb; ruby2.6.2)
       Content-Type:
       - application/json
       Authorization:
       - Bearer <TOKEN>
   response:
     status:
-      code: 500
-      message: Internal Server Error
+      code: 503
+      message: Service Unavailable
     headers:
       date:
-      - Mon, 24 Jun 2019 04:13:09 GMT
+      - Mon, 24 Jun 2019 05:47:35 GMT
       connection:
       - close
       content-length:
-      - '50'
+      - '19'
       content-type:
-      - application/json; charset=utf-8
+      - text/plain; charset=utf-8
       access-control-allow-origin:
       - "*"
       access-control-allow-headers:
@@ -187,7 +185,7 @@ http_interactions:
       x-content-type-options:
       - nosniff
       x-ohr-status:
-      - m, 4761, 20190624-034244.256, 1827.133
+      - m, 20536, 20190624-054051.687, 405.732
       content-security-policy:
       - 'connect-src ''self'' https://vc.hotjar.io https://*.hotjar.com:* wss://*.hotjar.com
         https://www.google-analytics.com; default-src ''self''; font-src ''self''
@@ -214,10 +212,10 @@ http_interactions:
       cache-control:
       - no-store
       etag:
-      - W/"32-gZxk36uKDBeKx42MtOvLgEcGsPg"
+      - W/"13-/70LdyMNgL+PAJa+Q/RtnRF82z8"
     body:
       encoding: UTF-8
-      string: '{"errors":["Request failed with status code 500"]}'
+      string: Service Unavailable
     http_version: 
-  recorded_at: Mon, 24 Jun 2019 04:13:09 GMT
+  recorded_at: Mon, 24 Jun 2019 05:47:35 GMT
 recorded_with: VCR 5.0.0
