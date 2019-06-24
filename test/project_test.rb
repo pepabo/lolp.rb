@@ -86,4 +86,33 @@ class ProjectTest < Minitest::Test
       assert_equal 404, Lolp.last_response.status
     end
   end
+
+  def test_project_storage
+    VCR.use_cassette('project_storage') do
+      Lolp.login(ENV['TEST_USERNAME'], ENV['TEST_PASSWORD'])
+      s = Lolp.project_storage('fancy-saga-7437.lolipop.io')
+      assert_equal 10485760, s['diskLimit']
+      assert_equal 53356, s['diskUsed']
+      assert_equal 150000, s['fileLimit']
+      assert_equal 2210, s['filesUsed']
+    end
+  end
+
+  def test_project_storage_faild
+    # タイミングにより、正しくパラメータを設定した時でも取得に失敗する時がある
+    VCR.use_cassette('project_storage_faild') do
+      Lolp.login(ENV['TEST_USERNAME'], ENV['TEST_PASSWORD'])
+      p = Lolp.create_project(
+        :wordpress,
+        payload: {
+          username: 'foobar',
+          password: 'FoobarSecretPW123$#',
+          email: 'foobar@example.com'
+        }
+      )
+      assert_raises Lolp::InternalServerError do
+        Lolp.project_storage(p['domain'])
+      end
+    end
+  end
 end
