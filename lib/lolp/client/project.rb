@@ -28,6 +28,14 @@ module Lolp
       def project_storage(name)
         get("v1/projects/#{name}/storage")
       end
+
+      def project_environment_variables(name)
+        get("v1/projects/#{name}/environment-variables")
+      end
+
+      def update_project_environment_variables(name, data=[])
+        put("v1/projects/#{name}/environment-variables", data)
+      end
     end
   end
 end
