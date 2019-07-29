@@ -8,6 +8,10 @@ module Lolp
       request(:get, path, params)
     end
 
+    def put(path, params = {})
+      request(:put, path, params)
+    end
+
     def post(path, params = {})
       request(:post, path, params)
     end
