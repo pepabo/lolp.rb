@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.mc.lolipop.jp/v1/projects/lolp-rb-test.lolipop.io/environment-variables
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - lolp/0.6.0 (+https://github.com/pepabo/lolp.rb; ruby2.6.3)
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <TOKEN>
+  response:
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Thu, 12 Apr 2018 06:01:23 GMT
+      connection:
+      - close
+      content-length:
+      - '374'
+      server:
+      - h2o/2.2.2
+      content-type:
+      - application/json; charset=utf-8
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode = block
+      x-content-type-options:
+      - nosniff
+      x-ohr-status:
+      - m, 4265, 20180412-032136.205, 9590.543
+      content-security-policy:
+      - 'default-src ''self''; connect-src ''self''; font-src https://fonts.gstatic.com
+        https://use.fontawesome.com; img-src ''self'' data: http://cache.img.gmo.jp
+        https://cache.img.gmo.jp https://s.gravatar.com https://www.google-analytics.com
+        https://www.google.co.jp https://social-plugins.line.me/widget/share https://stats.g.doubleclick.net;
+        style-src ''unsafe-inline'' https://cache.img.gmo.jp https://fonts.googleapis.com
+        https://use.fontawesome.com; frame-src https://social-plugins.line.me; script-src
+        ''self'' ''unsafe-inline'' https://cache.img.gmo.jp https://d.line-scdn.net
+        https://p01.mul-pay.jp https://pt01.mul-pay.jp https://www.google-analytics.com
+        https://www.googletagmanager.com; manifest-src ''self'''
+      front-end-https:
+      - 'on'
+    body:
+      encoding: UTF-8
+      string: '{"MC_DB_USERNAME":"f8b4fc79d4e4f4e9e5c2ac5234e5888c","sample":"sample","MC_DB_HOSTNAME":"mysql-1.mc.lolipop.lan","PATH":"/var/app/.nodebrew/current/bin:/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","RAILS_MASTER_KEY":"2ef6388b766a6273ffd8d5e32fa7546a","MC_DATABASE":"f8b4fc79d4e4f4e9e5c2ac5234e5888c","MC_DB_PASSWORD":"Daimyoengineer1"}'
+    http_version: 
+  recorded_at: Mon, 29 Jul 2019 08:59:53 GMT
+recorded_with: VCR 5.0.0
