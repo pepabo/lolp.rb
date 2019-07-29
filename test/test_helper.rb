@@ -43,3 +43,7 @@ end
 def test_subdomain
   'lolp-rb-test'
 end
+
+def test_envvar
+  [{"method":"create","variable":{"key":"sample","value":"sample"}}]
+end

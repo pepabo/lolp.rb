@@ -115,4 +115,27 @@ class ProjectTest < Minitest::Test
       end
     end
   end
+
+  def test_project_environment_variables
+    VCR.use_cassette('project_environment_variables') do
+      Lolp.project_environment_variables("#{test_subdomain}.lolipop.io")
+      assert_equal 200, Lolp.last_response.status
+    end
+  end
+
+  def test_update_project_environment_variables
+    VCR.use_cassette('update_project_environment_variables') do
+      Lolp.update_project_environment_variables("#{test_subdomain}.lolipop.io", test_envvar)
+      assert_equal 201, Lolp.last_response.status
+    end
+  end
+
+  def test_update_project_environment_variables_faild
+    VCR.use_cassette('update_project_environment_variables_faild') do
+      assert_raises Lolp::UnprocessableEntity do
+        Lolp.update_project_environment_variables("#{test_subdomain}.lolipop.io", test_envvar + [{"method":"invalid","variable":{"key":"sample2"}}])
+      end
+      assert_equal 422, Lolp.last_response.status
+    end
+  end
 end
