@@ -32,10 +32,12 @@ module Lolp
       def project_environment_variables(name)
         get("v1/projects/#{name}/environment-variables")
       end
+      alias project_envs project_environment_variables
 
       def update_project_environment_variables(name, data=[])
         put("v1/projects/#{name}/environment-variables", data)
       end
+      alias update_project_envs update_project_environment_variables
     end
   end
 end
