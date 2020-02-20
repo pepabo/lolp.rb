@@ -38,6 +38,18 @@ module Lolp
         put("v1/projects/#{name}/environment-variables", data)
       end
       alias update_project_envs update_project_environment_variables
+
+      def guest_pubkeys(project_domain)
+        get("v1/projects/#{project_domain}/guest-pubkey")
+      end
+
+      def create_guest_pubkey(project_domain, key_name, key_value)
+        post("v1/projects/#{project_domain}/guest-pubkey", name: key_name, key: key_value)
+      end
+
+      def delete_guest_pubkey(project_domain, key_name)
+        delete("v1/projects/#{project_domain}/guest-pubkey", name: key_name)
+      end
     end
   end
 end
