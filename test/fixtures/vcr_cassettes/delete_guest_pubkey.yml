@@ -1,0 +1,163 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.mc.lolipop.jp/v1/authenticate
+    body:
+      encoding: UTF-8
+      string: '{"username":"<USERNAME>","password":"<PASSWORD>"}'
+    headers:
+      User-Agent:
+      - lolp/0.7.0 (+https://github.com/pepabo/lolp.rb; ruby2.5.1)
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Thu, 20 Feb 2020 10:26:48 GMT
+      connection:
+      - close
+      content-length:
+      - '394'
+      content-type:
+      - application/json; charset=utf-8
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-ohr-status:
+      - m, 19755, 20200220-080012.280, 8798.595684889
+      content-security-policy:
+      - 'connect-src ''self'' https://www.google-analytics.com https://*.fontawesome.com
+        https://vc.hotjar.io https://*.hotjar.com:* wss://*.hotjar.com; default-src
+        ''self''; font-src ''self'' data: https://fonts.gstatic.com https://*.fontawesome.com
+        https://static.hotjar.com https://pro.fontawesome.com https://cdn.jsdelivr.net
+        https://cdnjs.cloudflare.com; frame-src ''self'' https://optimize.google.com
+        https://bid.g.doubleclick.net https://www.youtube.com https://social-plugins.line.me
+        https://vars.hotjar.com https://www.facebook.com; img-src ''self'' data: https://www.googletagmanager.com
+        https://ssl.gstatic.com https://www.gstatic.com https://www.google-analytics.com
+        https://optimize.google.com https://www.google.com https://www.googleadservices.com
+        https://www.google.co.jp https://stats.g.doubleclick.net https://s.gravatar.com
+        https://cache.img.gmo.jp https://social-plugins.line.me https://insights.hotjar.com
+        https://static.hotjar.com https://px.a8.net https://*.yahoo.co.jp https://s.yimg.jp
+        https://www.facebook.com; manifest-src ''self''; script-src ''self'' ''unsafe-eval''
+        ''unsafe-inline'' https://www.googletagmanager.com https://tagmanager.google.com
+        https://www.google-analytics.com https://ssl.google-analytics.com https://optimize.google.com
+        https://www.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net
+        https://*.fontawesome.com https://cache.img.gmo.jp https://p01.mul-pay.jp
+        https://pt01.mul-pay.jp https://in.treasuredata.com https://d.line-scdn.net
+        https://static.hotjar.com https://script.hotjar.com https://statics.a8.net
+        https://*.yahoo.co.jp https://s.yimg.jp https://cdn.taboola.com https://*.adroll.com
+        https://connect.facebook.net https://pro.fontawesome.com https://cdn.jsdelivr.net
+        https://cdnjs.cloudflare.com; style-src ''self'' ''unsafe-inline'' https://tagmanager.google.com
+        https://fonts.googleapis.com https://optimize.google.com https://*.fontawesome.com
+        https://cache.img.gmo.jp https://pro.fontawesome.com https://cdn.jsdelivr.net
+        https://cdnjs.cloudflare.com'
+      cache-control:
+      - no-store
+      x-ratelimit-limit:
+      - '1000'
+      x-ratelimit-remaining:
+      - '975'
+      etag:
+      - W/"18a-CsDI3UaGuBRHUEQNXmuSTU5X8cQ"
+      front-end-https:
+      - 'on'
+    body:
+      encoding: UTF-8
+      string: '"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxNTk2NmJhOC0yNWU2LTRkY2MtOTJiOS0zNWFiYTkwMDM2ZjciLCJpYXQiOjE1ODIxOTQ0MDg2OTksImV4cCI6MTU4MjIzNzYwODY5OSwidXNlcklkIjoiYmJlZjI2MTMtZTI4Yi00MDUyLWJlZmEtODVhNWU3NzVkNzUyIiwidXNlcl9pZCI6ImJiZWYyNjEzLWUyOGItNDA1Mi1iZWZhLTg1YTVlNzc1ZDc1MiIsInRva2VuS2V5IjoiZTg2ODQ4ZTUtY2Q1My00M2U2LTk0OTUtYzBhYTU1ZDQyNGFkIn0.KdsefS0uswrXHVkL1M1VBifr7LY1cjs3Rp6Yk-O_F3s"'
+    http_version: 
+  recorded_at: Thu, 20 Feb 2020 10:26:48 GMT
+- request:
+    method: delete
+    uri: https://api.mc.lolipop.jp/v1/projects/lolp-rb-test.lolipop.io/guest-pubkey?name=guest-pubkey
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - lolp/0.7.0 (+https://github.com/pepabo/lolp.rb; ruby2.5.1)
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <TOKEN>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Thu, 20 Feb 2020 10:26:49 GMT
+      connection:
+      - close
+      content-length:
+      - '55'
+      content-type:
+      - application/json; charset=utf-8
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-ohr-status:
+      - m, 397, 20200220-080008.830, 8803.46075446
+      content-security-policy:
+      - 'connect-src ''self'' https://www.google-analytics.com https://*.fontawesome.com
+        https://vc.hotjar.io https://*.hotjar.com:* wss://*.hotjar.com; default-src
+        ''self''; font-src ''self'' data: https://fonts.gstatic.com https://*.fontawesome.com
+        https://static.hotjar.com https://pro.fontawesome.com https://cdn.jsdelivr.net
+        https://cdnjs.cloudflare.com; frame-src ''self'' https://optimize.google.com
+        https://bid.g.doubleclick.net https://www.youtube.com https://social-plugins.line.me
+        https://vars.hotjar.com https://www.facebook.com; img-src ''self'' data: https://www.googletagmanager.com
+        https://ssl.gstatic.com https://www.gstatic.com https://www.google-analytics.com
+        https://optimize.google.com https://www.google.com https://www.googleadservices.com
+        https://www.google.co.jp https://stats.g.doubleclick.net https://s.gravatar.com
+        https://cache.img.gmo.jp https://social-plugins.line.me https://insights.hotjar.com
+        https://static.hotjar.com https://px.a8.net https://*.yahoo.co.jp https://s.yimg.jp
+        https://www.facebook.com; manifest-src ''self''; script-src ''self'' ''unsafe-eval''
+        ''unsafe-inline'' https://www.googletagmanager.com https://tagmanager.google.com
+        https://www.google-analytics.com https://ssl.google-analytics.com https://optimize.google.com
+        https://www.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net
+        https://*.fontawesome.com https://cache.img.gmo.jp https://p01.mul-pay.jp
+        https://pt01.mul-pay.jp https://in.treasuredata.com https://d.line-scdn.net
+        https://static.hotjar.com https://script.hotjar.com https://statics.a8.net
+        https://*.yahoo.co.jp https://s.yimg.jp https://cdn.taboola.com https://*.adroll.com
+        https://connect.facebook.net https://pro.fontawesome.com https://cdn.jsdelivr.net
+        https://cdnjs.cloudflare.com; style-src ''self'' ''unsafe-inline'' https://tagmanager.google.com
+        https://fonts.googleapis.com https://optimize.google.com https://*.fontawesome.com
+        https://cache.img.gmo.jp https://pro.fontawesome.com https://cdn.jsdelivr.net
+        https://cdnjs.cloudflare.com'
+      cache-control:
+      - no-store
+      x-ratelimit-limit:
+      - '1000'
+      x-ratelimit-remaining:
+      - '974'
+      etag:
+      - W/"37-oSBPtxbl2uS07m0eJFrNiBMURAU"
+      front-end-https:
+      - 'on'
+    body:
+      encoding: UTF-8
+      string: '"01101111 01101111 01101000 01101111 01110010 01101001"'
+    http_version: 
+  recorded_at: Thu, 20 Feb 2020 10:26:49 GMT
+recorded_with: VCR 5.0.0
