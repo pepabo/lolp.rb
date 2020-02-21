@@ -48,7 +48,7 @@ module Lolp
       end
 
       def delete_guest_pubkey(project_domain, key_name)
-        delete("v1/projects/#{project_domain}/guest-pubkey", name: key_name)
+        delete("v1/projects/#{project_domain}/guest-pubkey/#{key_name}")
       end
     end
   end

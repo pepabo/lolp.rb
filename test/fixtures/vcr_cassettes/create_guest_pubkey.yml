@@ -8,7 +8,7 @@ http_interactions:
       string: '{"username":"<USERNAME>","password":"<PASSWORD>"}'
     headers:
       User-Agent:
-      - lolp/0.7.0 (+https://github.com/pepabo/lolp.rb; ruby2.5.1)
+      - lolp/0.8.0 (+https://github.com/pepabo/lolp.rb; ruby2.5.1)
       Content-Type:
       - application/json
   response:
@@ -17,7 +17,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Thu, 20 Feb 2020 10:25:17 GMT
+      - Fri, 21 Feb 2020 08:10:50 GMT
       connection:
       - close
       content-length:
@@ -37,7 +37,7 @@ http_interactions:
       x-content-type-options:
       - nosniff
       x-ohr-status:
-      - m, 403, 20200220-080008.821, 8710.960447361
+      - m, 434, 20200220-080011.512, 87041.210388092
       content-security-policy:
       - 'connect-src ''self'' https://www.google-analytics.com https://*.fontawesome.com
         https://vc.hotjar.io https://*.hotjar.com:* wss://*.hotjar.com; default-src
@@ -66,19 +66,15 @@ http_interactions:
         https://cdnjs.cloudflare.com'
       cache-control:
       - no-store
-      x-ratelimit-limit:
-      - '1000'
-      x-ratelimit-remaining:
-      - '981'
       etag:
-      - W/"18a-uyG1vdWp+wRx7l9eghyGLf6+8/E"
+      - W/"18a-A9KRk532DeHu1I6u+FZhA9dMA4g"
       front-end-https:
       - 'on'
     body:
       encoding: UTF-8
-      string: '"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjZjRjZWUxYS02NzUxLTQyN2MtODhmNC1lZGM2ZTExZmU5MmQiLCJpYXQiOjE1ODIxOTQzMTcwMTAsImV4cCI6MTU4MjIzNzUxNzAxMSwidXNlcklkIjoiYmJlZjI2MTMtZTI4Yi00MDUyLWJlZmEtODVhNWU3NzVkNzUyIiwidXNlcl9pZCI6ImJiZWYyNjEzLWUyOGItNDA1Mi1iZWZhLTg1YTVlNzc1ZDc1MiIsInRva2VuS2V5IjoiMjc3ZjUwMzMtZWE3My00Y2ZiLTk3MjktYjZkZDJjNDU5YWJlIn0.ew1DOeFRCUQ94uUCaYzWDyNVIKsNexz4W974zWfOVYM"'
+      string: '"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1MWQ4OGI5OC1kYTAwLTQwNTgtODcwOS04NGNlM2FhYmJhZWUiLCJpYXQiOjE1ODIyNzI2NTA2MjAsImV4cCI6MTU4MjMxNTg1MDYyMSwidXNlcklkIjoiYmJlZjI2MTMtZTI4Yi00MDUyLWJlZmEtODVhNWU3NzVkNzUyIiwidXNlcl9pZCI6ImJiZWYyNjEzLWUyOGItNDA1Mi1iZWZhLTg1YTVlNzc1ZDc1MiIsInRva2VuS2V5IjoiODQ3YzNkNWUtYzhjYy00MmQ0LWIxYzAtY2UwYjE5OTI2ZWQyIn0.daApZGeUAZtdWws-BK1VtXaStnnVGD7Qguj-mteEtUE"'
     http_version: 
-  recorded_at: Thu, 20 Feb 2020 10:25:17 GMT
+  recorded_at: Fri, 21 Feb 2020 08:10:50 GMT
 - request:
     method: delete
     uri: https://api.mc.lolipop.jp/v1/projects/lolp-rb-test
@@ -87,7 +83,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - lolp/0.7.0 (+https://github.com/pepabo/lolp.rb; ruby2.5.1)
+      - lolp/0.8.0 (+https://github.com/pepabo/lolp.rb; ruby2.5.1)
       Content-Type:
       - application/json
       Authorization:
@@ -98,7 +94,7 @@ http_interactions:
       message: No Content
     headers:
       date:
-      - Thu, 20 Feb 2020 10:25:21 GMT
+      - Fri, 21 Feb 2020 08:10:53 GMT
       connection:
       - close
       access-control-allow-origin:
@@ -114,7 +110,7 @@ http_interactions:
       x-content-type-options:
       - nosniff
       x-ohr-status:
-      - m, 9872, 20200220-080017.389, 8702.661339875
+      - m, 9793, 20200220-080012.299, 87041.607097485
       content-security-policy:
       - 'connect-src ''self'' https://www.google-analytics.com https://*.fontawesome.com
         https://vc.hotjar.io https://*.hotjar.com:* wss://*.hotjar.com; default-src
@@ -143,10 +139,6 @@ http_interactions:
         https://cdnjs.cloudflare.com'
       cache-control:
       - no-store
-      x-ratelimit-limit:
-      - '1000'
-      x-ratelimit-remaining:
-      - '980'
       etag:
       - W/"a-bAsFyilMr4Ra1hIU5PyoyFRunpI"
       front-end-https:
@@ -155,7 +147,7 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Thu, 20 Feb 2020 10:25:21 GMT
+  recorded_at: Fri, 21 Feb 2020 08:10:53 GMT
 - request:
     method: post
     uri: https://api.mc.lolipop.jp/v1/projects
@@ -164,7 +156,7 @@ http_interactions:
       string: '{"db_password":"FoobarSecretPW123$#","sub_domain":"lolp-rb-test","type":"rails"}'
     headers:
       User-Agent:
-      - lolp/0.7.0 (+https://github.com/pepabo/lolp.rb; ruby2.5.1)
+      - lolp/0.8.0 (+https://github.com/pepabo/lolp.rb; ruby2.5.1)
       Content-Type:
       - application/json
       Authorization:
@@ -175,7 +167,7 @@ http_interactions:
       message: Created
     headers:
       date:
-      - Thu, 20 Feb 2020 10:25:22 GMT
+      - Fri, 21 Feb 2020 08:10:54 GMT
       connection:
       - close
       content-length:
@@ -195,7 +187,7 @@ http_interactions:
       x-content-type-options:
       - nosniff
       x-ohr-status:
-      - m, 434, 20200220-080011.512, 8712.669486349
+      - m, 9836, 20200220-080014.763, 87041.215495273
       content-security-policy:
       - 'connect-src ''self'' https://www.google-analytics.com https://*.fontawesome.com
         https://vc.hotjar.io https://*.hotjar.com:* wss://*.hotjar.com; default-src
@@ -224,19 +216,15 @@ http_interactions:
         https://cdnjs.cloudflare.com'
       cache-control:
       - no-store
-      x-ratelimit-limit:
-      - '1000'
-      x-ratelimit-remaining:
-      - '979'
       etag:
-      - W/"6c-1Ikm4FspKumE+rnDhx6VN9q+/N8"
+      - W/"6c-D6AJesnTxGDW/6w0nX2i1Nm12ow"
       front-end-https:
       - 'on'
     body:
       encoding: UTF-8
-      string: '{"id":"7d662fab-076a-4716-84d9-6126d850df09","domain":"lolp-rb-test.lolipop.io","sub_domain":"lolp-rb-test"}'
+      string: '{"id":"e68737b1-6553-43c8-8b13-36e6630675be","domain":"lolp-rb-test.lolipop.io","sub_domain":"lolp-rb-test"}'
     http_version: 
-  recorded_at: Thu, 20 Feb 2020 10:25:22 GMT
+  recorded_at: Fri, 21 Feb 2020 08:10:54 GMT
 - request:
     method: post
     uri: https://api.mc.lolipop.jp/v1/projects/lolp-rb-test.lolipop.io/guest-pubkey
@@ -245,7 +233,7 @@ http_interactions:
       string: '{"name":"guest-pubkey","key":"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQD2YebYvngk+QDvTbMv7cE6QWJ+M/SNHLD6bdVXQGzrBaI8gU+1fZDqfpwhmy75eGyCMoRynQYv7O3snGwxMllGM9xWZIJbcxKUnXF/hVPulKaxH963Md9L6+lOqEimhCaVgjKE8Mi1EcXRkliefu8sOZVbuEC69sCfxOEFNq+mRVp49l20/zHoXBj7tf5r2hyCBVWK6Mkyut8pDPeEJWNrNlVYKHa7kcAj1PNiBwJIWiMMeYnmAOSZ0/MSOL4U08/MIPCF+kqDOIbvX7b413Aw8K5iovZVWbym9NpGoqyrhD9nXx4mkFcKN/5WMvONt1B4x94bcLZqugXgdLXSMBTuGrV/SLhCieJ1ETSXtqN5xL7Wuu+EQYb3naaWUbeVLjcylnEeejFWFiCGPdY4+BXncNFKqzj8McHU71aqZ59htizVX4X1OMnreyfdjN2Y7nQOtnWB90hfBRhz04tKNnA9S1DhvXcO1fKeE/FgmVu8ocz5UhAW6BCNe7ghGsQJZSWwyXCHa+KLvMFjrAUHPfrzwQt2l5OKTHhXDtL/sA3EkHxWOcT3h4jP3E1s23gb+kUCeys5DnX5DRSSr5SwxvWwDoes5ZaUY7LfbpGXY8ZwmhwOTM9k2FIaIh8uPydvx+GbJyq4rew3fDJ8M2hvAdyoFQaWv1EWiYc6+LWhheERDw=="}'
     headers:
       User-Agent:
-      - lolp/0.7.0 (+https://github.com/pepabo/lolp.rb; ruby2.5.1)
+      - lolp/0.8.0 (+https://github.com/pepabo/lolp.rb; ruby2.5.1)
       Content-Type:
       - application/json
       Authorization:
@@ -256,7 +244,7 @@ http_interactions:
       message: Created
     headers:
       date:
-      - Thu, 20 Feb 2020 10:25:22 GMT
+      - Fri, 21 Feb 2020 08:10:55 GMT
       connection:
       - close
       content-length:
@@ -276,7 +264,7 @@ http_interactions:
       x-content-type-options:
       - nosniff
       x-ohr-status:
-      - m, 9884, 20200220-080017.843, 8707.417245961
+      - m, 9844, 20200220-080015.021, 87042.473491644
       content-security-policy:
       - 'connect-src ''self'' https://www.google-analytics.com https://*.fontawesome.com
         https://vc.hotjar.io https://*.hotjar.com:* wss://*.hotjar.com; default-src
@@ -305,10 +293,6 @@ http_interactions:
         https://cdnjs.cloudflare.com'
       cache-control:
       - no-store
-      x-ratelimit-limit:
-      - '1000'
-      x-ratelimit-remaining:
-      - '978'
       etag:
       - W/"2f4-4d5zog6VjdAX5qMaZZ0YE7oJh/k"
       front-end-https:
@@ -317,5 +301,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"name":"guest-pubkey","key":"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQD2YebYvngk+QDvTbMv7cE6QWJ+M/SNHLD6bdVXQGzrBaI8gU+1fZDqfpwhmy75eGyCMoRynQYv7O3snGwxMllGM9xWZIJbcxKUnXF/hVPulKaxH963Md9L6+lOqEimhCaVgjKE8Mi1EcXRkliefu8sOZVbuEC69sCfxOEFNq+mRVp49l20/zHoXBj7tf5r2hyCBVWK6Mkyut8pDPeEJWNrNlVYKHa7kcAj1PNiBwJIWiMMeYnmAOSZ0/MSOL4U08/MIPCF+kqDOIbvX7b413Aw8K5iovZVWbym9NpGoqyrhD9nXx4mkFcKN/5WMvONt1B4x94bcLZqugXgdLXSMBTuGrV/SLhCieJ1ETSXtqN5xL7Wuu+EQYb3naaWUbeVLjcylnEeejFWFiCGPdY4+BXncNFKqzj8McHU71aqZ59htizVX4X1OMnreyfdjN2Y7nQOtnWB90hfBRhz04tKNnA9S1DhvXcO1fKeE/FgmVu8ocz5UhAW6BCNe7ghGsQJZSWwyXCHa+KLvMFjrAUHPfrzwQt2l5OKTHhXDtL/sA3EkHxWOcT3h4jP3E1s23gb+kUCeys5DnX5DRSSr5SwxvWwDoes5ZaUY7LfbpGXY8ZwmhwOTM9k2FIaIh8uPydvx+GbJyq4rew3fDJ8M2hvAdyoFQaWv1EWiYc6+LWhheERDw=="}'
     http_version: 
-  recorded_at: Thu, 20 Feb 2020 10:25:22 GMT
+  recorded_at: Fri, 21 Feb 2020 08:10:55 GMT
 recorded_with: VCR 5.0.0
