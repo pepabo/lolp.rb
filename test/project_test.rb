@@ -138,4 +138,37 @@ class ProjectTest < Minitest::Test
       assert_equal 422, Lolp.last_response.status
     end
   end
+
+  def test_create_guest_pubkey
+    VCR.use_cassette('create_guest_pubkey') do
+      Lolp.delete_project(test_subdomain)
+      Lolp.create_project(
+        :rails,
+        db_password: 'FoobarSecretPW123$#',
+        sub_domain: test_subdomain
+      )
+
+      Lolp.create_guest_pubkey(
+        "#{test_subdomain}.lolipop.io",
+        'guest-pubkey',
+        'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQD2YebYvngk+QDvTbMv7cE6QWJ+M/SNHLD6bdVXQGzrBaI8gU+1fZDqfpwhmy75eGyCMoRynQYv7O3snGwxMllGM9xWZIJbcxKUnXF/hVPulKaxH963Md9L6+lOqEimhCaVgjKE8Mi1EcXRkliefu8sOZVbuEC69sCfxOEFNq+mRVp49l20/zHoXBj7tf5r2hyCBVWK6Mkyut8pDPeEJWNrNlVYKHa7kcAj1PNiBwJIWiMMeYnmAOSZ0/MSOL4U08/MIPCF+kqDOIbvX7b413Aw8K5iovZVWbym9NpGoqyrhD9nXx4mkFcKN/5WMvONt1B4x94bcLZqugXgdLXSMBTuGrV/SLhCieJ1ETSXtqN5xL7Wuu+EQYb3naaWUbeVLjcylnEeejFWFiCGPdY4+BXncNFKqzj8McHU71aqZ59htizVX4X1OMnreyfdjN2Y7nQOtnWB90hfBRhz04tKNnA9S1DhvXcO1fKeE/FgmVu8ocz5UhAW6BCNe7ghGsQJZSWwyXCHa+KLvMFjrAUHPfrzwQt2l5OKTHhXDtL/sA3EkHxWOcT3h4jP3E1s23gb+kUCeys5DnX5DRSSr5SwxvWwDoes5ZaUY7LfbpGXY8ZwmhwOTM9k2FIaIh8uPydvx+GbJyq4rew3fDJ8M2hvAdyoFQaWv1EWiYc6+LWhheERDw=='
+      )
+
+      assert_equal 201, Lolp.last_response.status
+    end
+  end
+
+  def test_guest_pubkeys
+    VCR.use_cassette('guest_pubkeys') do
+      Lolp.guest_pubkeys("#{test_subdomain}.lolipop.io")
+      assert_equal 200, Lolp.last_response.status
+    end
+  end
+
+  def test_delete_guest_pubkey
+    VCR.use_cassette('delete_guest_pubkey') do
+      Lolp.delete_guest_pubkey("#{test_subdomain}.lolipop.io", 'guest-pubkey')
+      assert_equal 200, Lolp.last_response.status
+    end
+  end
 end
