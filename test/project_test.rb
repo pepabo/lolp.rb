@@ -160,15 +160,20 @@ class ProjectTest < Minitest::Test
 
   def test_guest_pubkeys
     VCR.use_cassette('guest_pubkeys') do
-      Lolp.guest_pubkeys("#{test_subdomain}.lolipop.io")
+      res = Lolp.guest_pubkeys("#{test_subdomain}.lolipop.io")
       assert_equal 200, Lolp.last_response.status
+      assert_equal 'guest-pubkey', res[0]['name']
     end
   end
 
   def test_delete_guest_pubkey
     VCR.use_cassette('delete_guest_pubkey') do
-      Lolp.delete_guest_pubkey("#{test_subdomain}.lolipop.io", 'guest-pubkey')
-      assert_equal 200, Lolp.last_response.status
+      res = Lolp.delete_guest_pubkey("#{test_subdomain}.lolipop.io", 'guest-pubkey')
+      assert_equal 204, Lolp.last_response.status
+      assert_equal "", res
+
+      res = Lolp.guest_pubkeys("#{test_subdomain}.lolipop.io")
+      assert_equal [], res
     end
   end
 end
