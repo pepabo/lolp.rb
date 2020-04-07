@@ -29,7 +29,7 @@ module Lolp
     end
 
     def auto_loginable?(url)
-      !authenticated? && url !~ /\/authenticate/ && @username && @password
+      url !~ /\/authenticate/ && @username && @password
     end
 
     def request(method, url = nil, data = nil, headers = nil, &block)
